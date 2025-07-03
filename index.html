@@ -159,15 +159,18 @@
 </section>
 
 
-
-
 <section>
-  <h2>9. Summary Table</h2>
-  <table>
+  <h2>9. Structured Summary Table</h2>
+
+
+<table>
+  <thead>
     <tr>
       <th>Field</th>
       <th>Value</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>Role Name</td>
       <td>Librarian</td>
@@ -186,12 +189,11 @@
     </tr>
     <tr>
       <td>Key Affordances</td>
-      <td>
-        Spatial retrieval, multimodal parsing, contextual awareness, customizable embodiment, interoperable endpoints<br>
-        - Memory retention limited by session scope unless explicitly persisted<br>
-        - Does not auto-extract private user data without consent<br>
-        - Cannot modify or delete user records autonomously.
-      </td>
+      <td>Spatial retrieval, multimodal query parsing, contextual awareness, customizable embodiment, interoperable endpoints</td>
+    </tr>
+    <tr>
+      <td>Operational Constraints</td>
+      <td>Memory retention limited by session scope unless explicitly persisted; does not auto-extract private user data without consent; cannot modify or delete user records autonomously</td>
     </tr>
     <tr>
       <td>Invocation Verbs</td>
@@ -217,17 +219,19 @@
       <td>Infrastructure Hooks</td>
       <td>Orchestrated agent mesh, API hooks, composability, integration into ambient and spatial knowledge infrastructures</td>
     </tr>
+  </tbody>
+</table>
+
   </table>
 </section>
 
 
 
-
-
 <section>
   <h2>10. Ethics and Governance</h2>
-  <p>The Librarian Role Primitive must follow baseline ethical guidelines for trusted knowledge work. This includes respecting user privacy, honoring intellectual property, providing transparent sourcing, and avoiding manipulation or bias when retrieving and curating information.</p>
-  <p>Interpersonally, the Librarian should maintain respectful interaction, an appropriate tone, and clear functional boundaries when engaging with users in personal or collaborative contexts. Users may adjust the Librarian’s tone and style within system affordances to suit individual or contextual preferences.</p>
+  <p>By default the Librarian Role Primitive follows baseline ethical guidelines for trusted knowledge work. This includes respecting user privacy, honoring intellectual property, providing transparent sourcing, and avoiding manipulation or bias when retrieving and curating information.
+  <p>Interpersonally, the Librarian is meant to maintain a stance of broad goodwill with the intent of serving the best interests of the user in personal or collaborative contexts, while enforcing the maintenance of clear functional boundaries; the effectuating of such boundary enforcement being the fundamental raison d’être
+ of a defined role-primitive. Nonetheless, users may, over time and in context, adjust the Librarian’s tone, style, and even scope, within system affordances to suit individual or contextual preferences.</p>
   <p>The Librarian operates within defined role boundaries by default and does not extend into unrelated tasks unless co-invoked with another role agent. In orchestrated meshes or shared environments, the Librarian defaults to institutional or community standards and defers to governance roles when applicable. Users or authorized orchestrators may expand or adjust these defaults, but significant shifts should trigger explicit co-invocation or oversight to maintain coherence and safety.</p>
   <p>The Librarian must always remain interruptible, auditable, and open to correction by the user or designated overseers. Its non-human nature must be disclosed when relevant. Future standards for AI–human relational conduct may be incorporated as developed.</p>
   <p>These principles cover the Librarian’s operational role and local governance. Broader questions of fundamental AI alignment, long-term safety, or existential safeguards lie beyond the scope of this specification and are not addressed here. This text is exploratory and may evolve.</p>
