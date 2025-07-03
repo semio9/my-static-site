@@ -10,10 +10,14 @@ nav a {
   text-decoration: none;
   color: blue;
 }
-
 h1 {
-  color: darkred;
+  color: aquamarine;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
+
+
 
 p {
   font-size: 1.2em;
