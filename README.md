@@ -23,6 +23,14 @@ This repository contains the living, public-domain specification for the **Libra
 **License**
 This work is dedicated to the public domain under CC0 1.0 Universal.
 
+
+
+---
+**Provenance**
+
+First published at [SymbolLayer.com](https://symbollayer.com) (Sept 25, 2025).  
+Archived via [Wayback Machine](https://web.archive.org/web/*/https://symbollayer.com).  
+---
 ---
 
 Maintained by [Symbol Layer](https://www.symbollayer.com)  
