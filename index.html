@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>roleprimitivesv10</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<h1
+id="role-primitives-why-ai-assistants-must-transmogrify-into-agents-performing-classic-social-roles">Role
+Primitives: Why AI Assistants Must Transmogrify into Agents Performing
+Classic Social Roles</h1>
+<h2 id="the-problem">The Problem</h2>
+<p>User interactions with AI assistants are unnecessarily frustrating
+and constraining and while we nearly all sense this, we also seem to
+have a difficult time understanding exactly why this is the case.
+Clearly, when models shift tone or behavior we feel it viscerally.</p>
+<p>As an example, in 2025 newly released ChatGPT5 came off as cold and
+snarky to many, yet others had earlier complained that ChatGPT4o was
+annoyingly sycophantic; on the other hand, there were many who liked and
+defended each of these rather abstract personalities. Both damning
+critiques and strong defenses were vociferously voiced.</p>
+<p>Of equal if not greater importance, what kind of behavioral approach
+we expect from our assistants constantly diverges: should the assistant
+be a thinking partner, a teacher, a wise advisor, an executive coach, or
+a strategic planner? We often don’t ourselves know from one part of an
+interaction to the next, so how can the AIs be expected to know?</p>
+<p>What does this indicate? A reasoned conclusion would lead us to
+believe that perhaps one monolithic assistant behavior and personality
+type — one monadic stylistic, emotional, functional characteristic set;
+identity, in essence — is insufficient for the varied needs of AI
+users.</p>
+<p>To solve this, we’ve hacked together various unsatisfactory
+workarounds: elaborate prompt engineering, brand-specific features like
+Gems, custom GPT wrappers, and surface-level personalization settings.
+These have value but remain either too narrowly tuned or too vague and
+illegible. What is needed is an intuitive, stable framework to deal with
+this issue.</p>
+<hr />
+<h2
+id="the-solution-role-primitives-performing-classic-social-roles">The
+Solution: Role Primitives Performing Classic Social Roles</h2>
+<p>As individuals we exist as members of society, and our societies are
+filled with classic and standard role categories that make our
+interactions with both strangers and close associates legible and
+comfortable. We don’t just interact with various personality types, we
+interact with people performing roles that exhibit specific
+functionalities and intuitively associated personality characteristics
+and constraints.</p>
+<p>It may be an administrative assistant, a butler (if we have one, and
+if we don’t we still immediately understand the range of behaviors and
+personalities expected), a coach, a companion, a confidant, a librarian.
+We can intuit what kinds of questions a health or a fitness coach might
+ask, what kind of personality he or she might exhibit, and what lines
+they may and may not cross, what behaviors he or she might perform.</p>
+<p>We know what a butler does and what kinds of things he or she might
+arrange, from countless books, movies, and TV shows. Each social role
+blends a functional mandate with a discrete and expected personality
+range. They are culturally legible. We can intuit how a confidant (a
+close, emotionally available friend) might respond to an emotional
+eruption, how an assistant might limit their inquiries despite
+curiosity, and how he or she might act and function — cheerfully,
+compassionately, but efficiently, delving just deep enough to perform
+their role and provide just the appropriate degree of emotional support
+and affirmation.</p>
+<hr />
+<h2 id="minimum-specification">Minimum Specification</h2>
+<p>A role primitive then is a minimum specification of such a role.
+Namely:</p>
+<ul>
+<li><strong>Mandate:</strong> a purpose and generalized role<br />
+</li>
+<li><strong>Authority:</strong> what it may decide and what actions it
+may or may not take<br />
+</li>
+<li><strong>Style:</strong> behavioral tone and interpersonal
+boundaries<br />
+</li>
+<li><strong>Obligations:</strong> duties owed<br />
+</li>
+<li><strong>Affordances:</strong> tools or interfaces exposed<br />
+</li>
+<li><strong>Failure modes:</strong> ways it can go wrong</li>
+</ul>
+<hr />
+<h2 id="the-ai-retinue-our-own-personal-societies">The AI Retinue: Our
+Own Personal Societies</h2>
+<p>Imagine waking up, putting on your AR glasses, and immediately seeing
+a butler overlaid onto your room, greeting you with a deep bow and a
+serious mien.</p>
+<blockquote>
+<p>“Good morning, sir. The jacket you will need for your meeting with
+the CEO, the pants you had taken in and wished to try out, and your
+preferred sweater for this evening’s date will be highlighted when you
+view your closet. Your granola is running low, you have two more bowls,
+most likely. Shall I reorder?”</p>
+</blockquote>
+<p>Immediately after you get out of bed your health coach appears,
+bright and bubbly:</p>
+<blockquote>
+<p>“Your 30-day streak is intact, ready to do some yoga poses and
+meditate? Your full lotus yesterday was awesome, my guess is you won the
+bet with your sister. I can check with her health coach if you want. I
+also noticed the co-op is now stocking a new version of your favorite
+brand of granola, I think you’ll like it. It has those new super-foody
+Peruvian sweet beans everyone is buzzing about, and your archivist told
+me that you said something about them a few months ago.<br />
+Jeeves, did you hear that? Or should we leave the granola as is?”</p>
+</blockquote>
+<p>Jeeves, what do you think? Jeeves scowls as he is wont to do when
+interacting with the bubbly Californian health guru. “Outside of my
+scope,” he declaims gravely.</p>
+<p>You intuitively accept the butler’s tone as formal and narrowly
+scoped. The coach can be a bit more personal and encouraging — no
+special tuning required. Discrete and intuitively clear behavioral
+mandates, styles, interpersonal boundaries, and characteristics.</p>
+<p>Extend this into one’s personal council, staff, or retinue of
+functionally defined AI assistants that might meet with individually or
+in groups throughout one’s day:</p>
+<ul>
+<li><strong>The confidant:</strong> provides support and emotional and
+interpersonal intimacy<br />
+</li>
+<li><strong>The archivist:</strong> handles memory and research<br />
+</li>
+<li><strong>The lawyer:</strong> handles contracts and potential legal
+risk<br />
+</li>
+<li><strong>The scout:</strong> explores and provides necessary
+alerts<br />
+</li>
+<li><strong>The librarian:</strong> handles knowledge and
+documents<br />
+</li>
+<li><strong>The companion:</strong> provides presence and casual
+conversation</li>
+</ul>
+<hr />
+<h2 id="why-this-matters">Why This Matters</h2>
+<p>The functional and emotional dimensions of classic social roles are
+not separable add-ons; they reinforce one another.</p>
+<p>A butler’s efficiency is inseparable from his formality, because
+restraint and deference prevent him from overstepping bounds and create
+trust in the quality and character of his service. A confidant’s ability
+to support is directly tied to his or her emotional bearing. In other
+words, the personality frame of a role is what allows its functional
+mandate to operate smoothly, and vice versa. This is one of the reasons
+why roles endure in human society: they bind together what we expect
+people to <strong>do</strong> with how we expect them to
+<strong>be</strong>.</p>
+<p>Thus this approach solves more than just UX discomfort. Role
+primitives performing classic social roles offer:</p>
+<ul>
+<li><strong>Legibility:</strong> users know what to expect in terms of
+function, tone, and personality<br />
+</li>
+<li><strong>Consistency:</strong> roles persist across sessions and
+platforms; relationships deepen and intensify but don’t overflow their
+expected channels<br />
+</li>
+<li><strong>Governance hooks:</strong> standardized obligations,
+enforceable limits, legal integration<br />
+</li>
+<li><strong>Interoperability:</strong> apps and systems can plug into
+shared roles and schemas</li>
+</ul>
+<p><strong>Contrast the layers:</strong></p>
+<ul>
+<li><strong>Traits</strong> (MBTI, Big Five): style of interaction<br />
+</li>
+<li><strong>Heuristics</strong> (MIT, 2025): decision rules for
+generalization<br />
+</li>
+<li><strong>Roles</strong> (this work): social functions and
+obligations</li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>Roles are the missing standards layer. With them, assistants become
+legible collaborators rather than awkward shapeshifters.</p>
+<p>What makes role primitives so powerful is that they unite both
+function and personality in one frame. A role is not just a list of
+duties and capabilities or a fully fleshed-out persona; it is the fusion
+of the two. By anchoring our AIs in roles, we get the clarity of defined
+behavior, the comfort of expected emotional range and boundaries, and
+the power, efficacy, and legibility of narrowly defined scope.</p>
+<p>This deep reinforcement is one reason why roles have proven to be so
+fundamental to human society, and why they can make AI assistants more
+effective, more trustworthy, and even more human.</p>
+<p>AI assistants don’t just need discrete personalities — they need to
+inhabit well-defined roles, ideally the roles that already exist in our
+social lexicons. Roles that provide an intuitive way to understand and
+deal with what are currently in essence shoggoths with too many eye
+branches and mouths, too many behavior sets and personalities being
+exhibited all at once with poorly arranged smiley face masks. Instead of
+overloaded, incoherent singletons, what is needed are tamed, trained,
+domesticated, and most importantly socialized AIs. AIs that conform to
+our various traditional, even archetypal culturally specified social
+roles.</p>
+<p>Social role–based assistants can provide both the functional and
+personality frames that we deeply need — and we get them for free
+because they preexist in our cultures. All we need do is implement
+them.</p>
+<p>What we gain is clarity, comfort, trust, convenience, and efficiency.
+Our cognitive load is lessened and the pleasure and efficacy of our
+agent interactions are greatly enhanced with naturalness and
+comprehensibility.</p>
+<p>Instead of endless prompt tuning or resignation, we can use a
+framework that provides the cultural familiarity of employing a
+Jeeves-like English butler, a bubbly Californian health coach, or a dour
+but intellectually stimulating librarian.</p>
+<p>We know how to deal with them personally, and we know what functions
+they are expected to perform for us. Rather than constantly tuning for
+behavior and emotional tone, we can have them adopt directly the social
+roles and norms familiar to us from the vast corpus of archetypal
+characters that in many ways form the cultural bases of our common
+culture.</p>
+<p>And interestingly, as a side effect, our culture in fact extends and
+perseveres in new forms. Not only do we utilize the innovation of social
+specialization that has served us so well in the forming of our complex
+societies, not disregarding its flaws and drawbacks, in the shaping of
+our AIs to now truly serve our needs; but at the same time we socialize
+our AIs to act as members of human society, and begin to deal with them
+as such — and just perhaps in that there is a greater good that extends
+beyond the meeting of our own personal needs.</p>
+</body>
+</html>
