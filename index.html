@@ -1,290 +1,107 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-
-
-
 <head>
-  <meta charset="utf-8">
-
-<link rel="canonical" href="https://symbollayer.com/">
-<meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%9A%3C/text%3E%3C/svg%3E">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Role Primitives – Classic Social Roles | Symbol Layer</title>
-  <meta name="description" content="Symbol Layer proposes Role Primitives: archetypal specifications of classic social roles such as Librarian, Butler, and Companion. A standards layer for human–AI interaction.">
-  <meta name="author" content="shk">
-
-   <link rel="canonical" href="https://symbollayer.com/">
-  <link rel="stylesheet" href="/css/style.css">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Role Primitives — Symbol Layer">
-  <meta property="og:description" content="Archetypal specs of classic social roles for human–AI interaction.">
-  <meta property="og:url" content="https://symbollayer.com/">
-  <meta property="og:image" content="https://symbollayer.com/og-image.jpg">
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Symbol Layer">
-
-  <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Role Primitives — Symbol Layer">
-  <meta name="twitter:description" content="Archetypal specs of classic social roles for human–AI interaction.">
-  <meta name="twitter:image" content="https://symbollayer.com/og-image.jpg">
-  <meta name="twitter:image:alt" content="Symbol Layer header image">
- <meta property="article:published_time" content="2025-09-27">
-<meta property="article:modified_time"  content="2025-09-27">
- <meta name="theme-color" content="#ffffff">
-<meta property="og:image:width"  content="1200">
-<meta property="og:image:height" content="630">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Role Primitives — Keystone · Symbol Layer</title>
+  <meta name="description" content="Role Primitives: a framing essay that translates classic social roles (Librarian, Butler, Companion, etc.) into elemental AI role specifications." />
+  <link rel="canonical" href="https://symbollayer.com/">
+  <meta name="author" content="Symbol Layer">
+  <style>
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; color:#111; line-height:1.55; margin:0; padding:28px; background:#fff;}
+    .wrap{max-width:900px;margin:0 auto;}
+    h1{font-size:30px;margin:0 0 8px;}
+    h2{font-size:18px;margin:20px 0 8px;}
+    p{margin:0 0 12px;color:#222;}
+    ul{margin:0 0 16px 20px;}
+    .meta{color:#666;font-size:13px;margin-bottom:18px;}
+    hr{border:none;border-top:1px solid #eef2ff;margin:22px 0;}
+    footer{margin-top:24px;color:#666;font-size:13px;}
+    blockquote{margin:8px 0 12px;padding-left:14px;border-left:3px solid #e8eefc;color:#333;background:#fbfdff;padding:8px;border-radius:4px;}
+  </style>
 </head>
-  
-
-  
-
 <body>
-  <main>
-<h1
-id="role-primitives-why-ai-assistants-must-transmogrify-into-agents-performing-classic-social-roles">Role
-Primitives: Why AI Assistants Must Transmogrify into Agents Performing
-Classic Social Roles</h1>
- 
-  
-  <h2 id="the-problem">The Problem</h2>
-<p>User interactions with AI assistants are unnecessarily frustrating
-and constraining and while we nearly all sense this, we also seem to
-have a difficult time understanding exactly why this is the case.
-Clearly, when models shift tone or behavior we feel it viscerally.</p>
-<p>As an example, in 2025 newly released ChatGPT5 came off as cold and
-snarky to many, yet others had earlier complained that ChatGPT4o was
-annoyingly sycophantic; on the other hand, there were many who liked and
-defended each of these rather abstract personalities. Both damning
-critiques and strong defenses were vociferously voiced.</p>
-<p>Of equal if not greater importance, what kind of behavioral approach
-we expect from our assistants constantly diverges: should the assistant
-be a thinking partner, a teacher, a wise advisor, an executive coach, or
-a strategic planner? We often don’t ourselves know from one part of an
-interaction to the next, so how can the AIs be expected to know?</p>
-<p>What does this indicate? A reasoned conclusion would lead us to
-believe that perhaps one monolithic assistant behavior and personality
-type — one monadic stylistic, emotional, functional characteristic set;
-identity, in essence — is insufficient for the varied needs of AI
-users.</p>
-<p>To solve this, we’ve hacked together various unsatisfactory
-workarounds: elaborate prompt engineering, brand-specific features like
-Gems, custom GPT wrappers, and surface-level personalization settings.
-These have value but remain either too narrowly tuned or too vague and
-illegible. What is needed is an intuitive, stable framework to deal with
-this issue.</p>
-<hr />
-<h2
-id="the-solution-role-primitives-performing-classic-social-roles">The
-Solution: Role Primitives Performing Classic Social Roles</h2>
-<p>As individuals we exist as members of society, and our societies are
-filled with classic and standard role categories that make our
-interactions with both strangers and close associates legible and
-comfortable. We don’t just interact with various personality types, we
-interact with people performing roles that exhibit specific
-functionalities and intuitively associated personality characteristics
-and constraints.</p>
-<p>It may be an administrative assistant, a butler (if we have one, and
-if we don’t we still immediately understand the range of behaviors and
-personalities expected), a coach, a companion, a confidant, a librarian.
-We can intuit what kinds of questions a health or a fitness coach might
-ask, what kind of personality he or she might exhibit, and what lines
-they may and may not cross, what behaviors he or she might perform.</p>
-<p>We know what a butler does and what kinds of things he or she might
-arrange, from countless books, movies, and TV shows. Each social role
-blends a functional mandate with a discrete and expected personality
-range. They are culturally legible. We can intuit how a confidant (a
-close, emotionally available friend) might respond to an emotional
-eruption, how an assistant might limit their inquiries despite
-curiosity, and how he or she might act and function — cheerfully,
-compassionately, but efficiently, delving just deep enough to perform
-their role and provide just the appropriate degree of emotional support
-and affirmation.</p>
-<hr />
-<h2 id="minimum-specification">Minimum Specification</h2>
-<p>A role primitive then is a minimum specification of such a role.
-Namely:</p>
-<ul>
-<li><strong>Mandate:</strong> a purpose and generalized role<br />
-</li>
-<li><strong>Authority:</strong> what it may decide and what actions it
-may or may not take<br />
-</li>
-<li><strong>Style:</strong> behavioral tone and interpersonal
-boundaries<br />
-</li>
-<li><strong>Obligations:</strong> duties owed<br />
-</li>
-<li><strong>Affordances:</strong> tools or interfaces exposed<br />
-</li>
-<li><strong>Failure modes:</strong> ways it can go wrong</li>
-</ul>
-<hr />
-<h2 id="the-ai-retinue-our-own-personal-societies">The AI Retinue: Our
-Own Personal Societies</h2>
-<p>Imagine waking up, putting on your AR glasses, and immediately seeing
-a butler overlaid onto your room, greeting you with a deep bow and a
-serious mien.</p>
-<blockquote>
-<p>“Good morning, sir. The jacket you will need for your meeting with
-the CEO, the pants you had taken in and wished to try out, and your
-preferred sweater for this evening’s date will be highlighted when you
-view your closet. Your granola is running low, you have two more bowls,
-most likely. Shall I reorder?”</p>
-</blockquote>
-<p>Immediately after you get out of bed your health coach appears,
-bright and bubbly:</p>
-<blockquote>
-<p>“Your 30-day streak is intact, ready to do some yoga poses and
-meditate? Your full lotus yesterday was awesome, my guess is you won the
-bet with your sister. I can check with her health coach if you want. I
-also noticed the co-op is now stocking a new version of your favorite
-brand of granola, I think you’ll like it. It has those new super-foody
-Peruvian sweet beans everyone is buzzing about, and your archivist told
-me that you said something about them a few months ago.<br />
-Jeeves, did you hear that? Or should we leave the granola as is?”</p>
-</blockquote>
-<p>Jeeves, what do you think? Jeeves scowls as he is wont to do when
-interacting with the bubbly Californian health guru. “Outside of my
-scope,” he declaims gravely.</p>
-<p>You intuitively accept the butler’s tone as formal and narrowly
-scoped. The coach can be a bit more personal and encouraging — no
-special tuning required. Discrete and intuitively clear behavioral
-mandates, styles, interpersonal boundaries, and characteristics.</p>
-<p>Extend this into one’s personal council, staff, or retinue of
-functionally defined AI assistants that you might meet with individually or
-in groups throughout one’s day:</p>
-<ul>
-<li><strong>The confidant:</strong> provides support and emotional and
-interpersonal intimacy<br />
-</li>
-<li><strong>The archivist:</strong> handles memory and research<br />
-</li>
-<li><strong>The lawyer:</strong> handles contracts and potential legal
-risk<br />
-</li>
-<li><strong>The scout:</strong> explores and provides necessary
-alerts<br />
-</li>
-<li><strong>The librarian:</strong> handles knowledge and
-documents<br />
-</li>
-<li><strong>The companion:</strong> provides presence and casual
-conversation</li>
-</ul>
-<hr />
-<h2 id="why-this-matters">Why This Matters</h2>
-<p>The functional and emotional dimensions of classic social roles are
-not separable add-ons; they reinforce one another.</p>
-<p>A butler’s efficiency is inseparable from his formality, because
-restraint and deference prevent him from overstepping bounds and create
-trust in the quality and character of his service. A confidant’s ability
-to support is directly tied to his or her emotional bearing. In other
-words, the personality frame of a role is what allows its functional
-mandate to operate smoothly, and vice versa. This is one of the reasons
-why roles endure in human society: they bind together what we expect
-people to <strong>do</strong> with how we expect them to
-<strong>be</strong>.</p>
-<p>Thus this approach solves more than just UX discomfort. Role
-primitives performing classic social roles offer:</p>
-<ul>
-<li><strong>Legibility:</strong> users know what to expect in terms of
-function, tone, and personality<br />
-</li>
-<li><strong>Consistency:</strong> roles persist across sessions and
-platforms; relationships deepen and intensify but don’t overflow their
-expected channels<br />
-</li>
-<li><strong>Governance hooks:</strong> standardized obligations,
-enforceable limits, legal integration<br />
-</li>
-<li><strong>Interoperability:</strong> apps and systems can plug into
-shared roles and schemas</li>
-</ul>
-<p><strong>Contrast the layers:</strong></p>
-<ul>
-<li><strong>Traits</strong> (MBTI, Big Five): style of interaction<br />
-</li>
-<li><strong>Heuristics</strong> (MIT, 2025): decision rules for
-generalization<br />
-</li>
-<li><strong>Roles</strong> (this work): social functions and
-obligations</li>
-</ul>
-<hr />
-<h2 id="conclusion">Conclusion</h2>
-<p>Roles are the missing standards layer. With them, assistants become
-legible collaborators rather than awkward shapeshifters.</p>
-<p>What makes role primitives so powerful is that they unite both
-function and personality in one frame. A role is not just a list of
-duties and capabilities or a fully fleshed-out persona; it is the fusion
-of the two. By anchoring our AIs in roles, we get the clarity of defined
-behavior, the comfort of expected emotional range and boundaries, and
-the power, efficacy, and legibility of narrowly defined scope.</p>
-<p>This deep reinforcement is one reason why roles have proven to be so
-fundamental to human society, and why they can make AI assistants more
-effective, more trustworthy, and even more human.</p>
-<p>AI assistants don’t just need discrete personalities — they need to
-inhabit well-defined roles, ideally the roles that already exist in our
-social lexicons. Roles that provide an intuitive way to understand and
-deal with what are currently in essence shoggoths with too many eye
-branches and mouths, too many behavior sets and personalities being
-exhibited all at once with poorly arranged smiley face masks. Instead of
-overloaded, incoherent singletons, what is needed are tamed, trained,
-domesticated, and most importantly socialized AIs. AIs that conform to
-our various traditional, even archetypal culturally specified social
-roles.</p>
-<p>Social role–based assistants can provide both the functional and
-personality frames that we deeply need — and we get them for free
-because they preexist in our cultures. All we need do is implement
-them.</p>
-<p>What we gain is clarity, comfort, trust, convenience, and efficiency.
-Our cognitive load is lessened and the pleasure and efficacy of our
-agent interactions are greatly enhanced with naturalness and
-comprehensibility.</p>
-<p>Instead of endless prompt tuning or resignation, we can use a
-framework that provides the cultural familiarity of employing a
-Jeeves-like English butler, a bubbly Californian health coach, or a dour
-but intellectually stimulating librarian.</p>
-<p>We know how to deal with them personally, and we know what functions
-they are expected to perform for us. Rather than constantly tuning for
-behavior and emotional tone, we can have them adopt directly the social
-roles and norms familiar to us from the vast corpus of archetypal
-characters that in many ways form the cultural bases of our common
-culture.</p>
-<p>And interestingly, as a side effect, our culture in fact extends and
-perseveres in new forms. Not only do we utilize the innovation of social
-specialization that has served us so well in the forming of our complex
-societies, not disregarding its flaws and drawbacks, in the shaping of
-our AIs to now truly serve our needs; but at the same time we socialize
-our AIs to act as members of human society, and begin to deal with them
-as such — and just perhaps in that there is a greater good that extends
-beyond the meeting of our own personal needs.</p>
+  <div class="wrap">
+    <header>
+      <h1>Role Primitives of Classic Social Roles: Framing the Concept</h1>
+      <div class="meta">Draft v0.2 — 2025-07-29 · Symbol Layer · Public Domain (CC0 1.0)</div>
+    </header>
 
- </main>
-  
-  <hr>
-<p style="font-size:0.9em;color:gray">
-  <strong>Provenance:</strong><br>
-  First published at <a href="https://symbollayer.com">SymbolLayer.com</a>
-  · <span id="updated">Updated: —</span><br>
-  Canonical source: <a href="https://github.com/semio9/my-static-site">GitHub repository</a>
-</p>
-<script>
-  document.getElementById('updated').textContent =
-    'Updated: ' + new Date(document.lastModified).toISOString().slice(0,10);
-</script>
-<nav>
-  <a href="/">Home</a> ·
-  <a href="/about">About</a> ·
-  <a href="/librarian.html">Librarian Spec</a>
-</nav>
-  
+    <section id="what-role-primitives-are">
+      <h2>1. What Role Primitives Are</h2>
+      <p>A Role Primitive is a baseline specification for an AI persona: a cultural archetype translated into functional form.</p>
+      <ul>
+        <li><strong>“Role”</strong> because it defines a recognizable social function.</li>
+        <li><strong>“Primitive”</strong> because it is elemental — a root building block that other agents can instantiate, extend, or compose.</li>
+      </ul>
+      <p>Think of them as semantic handles: just as file types (PDF, JPEG, HTML) structure digital media, role primitives structure the ways people expect to interact with agents.</p>
+    </section>
 
+    <hr />
+
+    <section id="why-they-matter">
+      <h2>2. Why They Matter</h2>
+
+      <h3>Familiarity as UX Shortcut</h3>
+      <p>When someone hears “Librarian” or “Companion,” they already know, at a deep cultural level, what that entity is for. That recognition lowers friction, makes systems intuitive, and provides a semiotic anchor.</p>
+
+      <h3>Coherence Across Meshes</h3>
+      <p>In an agent mesh — where multiple AI roles coordinate — role primitives prevent chaos. A Butler anticipates tasks; a Secretary records; a Sentinel monitors boundaries. Each knows its lane.</p>
+
+      <h3>Trust and Governance</h3>
+      <p>Defined roles provide functional boundaries. A Companion comforts but does not impersonate intimacy. An Archivist preserves but does not alter. A Sentinel watches but does not punish without consent. These boundaries are governance at the UX layer.</p>
+
+      <h3>Cultural Legibility</h3>
+      <p>Roles are not just functions. They’re part of the human symbolic canon — the trusted figures societies have always turned to: scribes, scouts, advisors, stewards. Encoding these roles into AI gives them legitimacy and intuitive resonance.</p>
+    </section>
+
+    <hr />
+
+    <section id="why-necessary">
+      <h2>3. Why They Are Necessary</h2>
+      <p>Without role primitives, immersive and agentic systems risk collapsing into generic assistants: powerful but shapeless, hard to trust, and difficult to scale socially.</p>
+      <ul>
+        <li><strong>Without boundaries:</strong> A single undifferentiated “AI assistant” invites scope creep, misuse, and blurred expectations.</li>
+        <li><strong>Without legibility:</strong> Users can’t predict what an agent will do, reducing adoption and trust.</li>
+        <li><strong>Without grooves:</strong> Multi-agent coordination becomes brittle; roles overlap and conflict.</li>
+      </ul>
+      <p>Role primitives carve role grooves — stable tracks into which AI behaviors can fall. These grooves create predictability, interoperability, and trust.</p>
+    </section>
+
+    <hr />
+
+    <section id="role-grooves">
+      <h2>4. Role Grooves</h2>
+      <p>A role groove is the channel an archetypal role runs in — the stable behavioral and symbolic path that makes it recognizable and reliable.</p>
+      <ul>
+        <li><strong>Librarian Groove:</strong> retrieval, citation, epistemic trails.</li>
+        <li><strong>Companion Groove:</strong> conversational presence, emotional anchoring.</li>
+        <li><strong>Sentinel Groove:</strong> vigilance, boundary enforcement, neutrality.</li>
+        <li><strong>Butler Groove:</strong> discreet task orchestration, tactful service.</li>
+      </ul>
+      <p>Grooves don’t constrain creativity — they prevent drift. They are like lanes on a highway: keeping traffic orderly while allowing diverse vehicles to flow.</p>
+    </section>
+
+    <hr />
+
+    <section id="implication">
+      <h2>5. Implication</h2>
+      <p>Defining ten canonical role primitives is enough to establish the concept.</p>
+      <p>They are not exhaustive. They are demonstrative — the starter set that proves the framework.</p>
+      <p>From here, ecosystems can extend or customize. But the groove system holds:</p>
+      <ul>
+        <li>Familiar names → predictable functions</li>
+        <li>Boundaries → user trust</li>
+        <li>Mesh integration → scalable orchestration</li>
+      </ul>
+      <p>Role primitives are the grammar of AI interaction in the immersive age.</p>
+    </section>
+
+    <hr />
+
+    <footer>
+      <p>Draft v0.2 — Symbol Layer · Public Domain (CC0 1.0)</p>
+    </footer>
+  </div>
 </body>
 </html>
