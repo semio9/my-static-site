@@ -232,22 +232,36 @@
 </section>
 </main>
   
-  <hr>
-<p style="font-size:0.9em;color:gray">
-  <strong>Provenance:</strong><br>
-  First published at <a href="https://symbollayer.com">SymbolLayer.com</a>
-  · <span id="updated">Updated: —</span><br>
-  Canonical source: <a href="https://github.com/semio9/my-static-site">GitHub repository</a>
-</p>
-<script>
-  document.getElementById('updated').textContent =
-    'Updated: ' + new Date(document.lastModified).toISOString().slice(0,10);
-</script>
+
 <nav>
   <a href="/">Home</a> ·
   <a href="/about">About</a> ·
-  <a href="/librarian.html">Librarian Spec</a>
+  <a href="/librarian">Librarian Spec</a> ·
+  <a href="/companion">Companion Spec</a>
 </nav>
+
+<p style="font-size:0.9em;color:gray;margin-top:0.6em">
+  <strong>Provenance:</strong><br>
+  First published at <a href="https://symbollayer.com">SymbolLayer.com</a> ·
+  <span id="updated">Updated: —</span><br>
+  Canonical source: <a href="https://github.com/semio9/my-static-site">GitHub repository</a>
+</p>
+
+<script>
+  (function(){
+    const el = document.getElementById('updated');
+    if (!el) return;
+    try {
+      const d = new Date(document.lastModified);
+      el.textContent = 'Updated: ' + (isNaN(d) ? '—' : d.toISOString().slice(0,10));
+    } catch (e) {
+      el.textContent = 'Updated: —';
+    }
+  })();
+</script>
+
+
+  
 
 </body>
 </html>
