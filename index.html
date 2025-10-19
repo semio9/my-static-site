@@ -227,25 +227,6 @@
     </aside>
   </div>
 
-  <script>
-    // small TOC active-link highlight (keeps behavior light)
-    (function(){
-      const links = document.querySelectorAll('.toc a[href^="#"]');
-      const sections = Array.from(links).map(a => document.querySelector(a.getAttribute('href')));
-      function onScroll(){
-        const y = window.scrollY + 120;
-        let idx = sections.findIndex(s => s && s.offsetTop + s.offsetHeight > y);
-        if (idx === -1) idx = sections.length - 1;
-        links.forEach((l,i)=> l.classList.toggle('active', i === idx));
-      }
-      document.addEventListener('scroll', onScroll, {passive:true});
-      onScroll();
-    })();
-  </script>
-
-
-
-
 <footer class="pagefoot" role="contentinfo">
 
   <p style="font-size:0.9em;color:gray;margin-top:0.6em">
