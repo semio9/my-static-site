@@ -1,3 +1,267 @@
+
+
+   <!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Role Primitives — Keystone · Symbol Layer</title>
+  <meta name="description" content="Role Primitives: a framing essay that translates classic social roles (Librarian, Butler, Companion, etc.) into elemental AI role specifications." />
+  <link rel="canonical" href="https://symbollayer.com/">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Symbol Layer">
+  <meta name="datePublished" content="2025-10-08">
+  <meta property="og:title" content="Role Primitives — Symbol Layer">
+  <meta property="og:description" content="Elemental AI role specifications that translate classic social roles into machine-actionable behaviours and governance boundaries.">
+  <meta property="og:url" content="https://symbollayer.com/">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://symbollayer.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    /* Footer inside grid */
+    .page .pagefoot{
+      grid-column: 1 / -1;
+      border-top:1px solid #eef4ff;
+      padding-top:18px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .hero{
+      background:linear-gradient(180deg,#f8fbff 0%,#ffffff 100%);
+      border-bottom:1px solid #eef4ff;
+      text-align:center;
+      padding:64px 24px 48px;
+    }
+    .hero .tagline{color:#555;font-size:18px;margin:10px 0 22px}
+    .hero-ctas{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .hero .inner { max-width: 900px; margin: 0 auto; }
+
+    :root{
+      --max-w:1100px;
+      --accent:#0b6cff;
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --card:#f6f9ff;
+      --reader-width:68ch;
+      --radius:12px;
+      --gap:20px;
+    }
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:#0b1220;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .page{max-width:var(--max-w);margin:36px auto;padding:24px;display:grid;grid-template-columns:1fr 320px;gap:var(--gap)}
+    @media (max-width:980px){ .page{grid-template-columns:1fr; padding:18px} .toc {order:2} .main {order:1} }
+
+    header.site{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+    .brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:16px}
+    .meta-small{color:var(--muted);font-size:13px}
+
+    article p{max-width:var(--reader-width);margin:0 0 14px}
+    article h2{font-size:20px;margin:28px 0 10px;color:#071133}
+    article h3{font-size:16px;margin:16px 0 8px;color:#0c1a33}
+
+    .toc{position:sticky;top:28px;align-self:start;padding:14px;border-radius:10px;background:#fff;border:1px solid #f2f6ff}
+    .toc h4{margin:0 0 8px;font-size:14px}
+    .toc ul{list-style:none;padding:0;margin:0}
+    .toc a{display:block;padding:6px 6px;border-radius:8px;text-decoration:none;color:#0b1220;font-size:14px}
+    .toc a:hover{background:#f7fbff}
+  </style>
+</head>
+
+<body>
+  <section class="hero" role="banner">
+    <div class="inner">
+      <h1>Role Primitives</h1>
+      <p class="tagline">Classic social roles, re-engineered for the agentic age.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#keystone">Read the keystone essay</a>
+        <a class="btn btn-ghost" href="#specs">Explore the role specs</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="page" role="document">
+    <div class="main">
+      <header class="site">
+        <a class="brand" href="/">SymbolLayer</a>
+        <div class="meta-small">Draft v0.2 — 2025-10-08 · CC0 1.0</div>
+      </header>
+
+      
+
+ <article id="keystone" aria-labelledby="keystone-heading">
+        <h2 id="keystone-heading">1. What Role Primitives Are</h2>
+        <p>A Role Primitive is a baseline specification for an AI persona: a cultural archetype translated into functional form.</p>
+        <ul>
+          <li><strong>“Role”</strong> because it defines a recognizable social function.</li>
+          <li><strong>“Primitive”</strong> because it is elemental — a root building block that other agents can instantiate, extend, or compose.</li>
+        </ul>
+        <p>Think of them as semantic handles: just as file types (PDF, JPEG, HTML) structure digital media, role primitives structure the ways people expect to interact with agents.</p>
+
+        <h2>2. Why They Matter</h2>
+        <h3>Familiarity as UX Shortcut</h3>
+        <p>When someone hears “Librarian” or “Companion,” they already know, at a deep cultural level, what that entity is for. That recognition lowers friction, makes systems intuitive, and provides a semiotic anchor.</p>
+
+        <h3>Coherence Across Meshes</h3>
+        <p>In an agent mesh — where multiple AI roles coordinate — role primitives prevent chaos. A Butler anticipates tasks; a Secretary records; a Sentinel monitors boundaries. Each knows its lane.</p>
+
+        <blockquote>Defined roles create predictable interactions: they are governance at the UX layer.</blockquote>
+
+        <h3>Trust and Governance</h3>
+        <p>Defined roles provide functional boundaries. A Companion comforts but does not impersonate intimacy. An Archivist preserves but does not alter. A Sentinel watches but does not punish without consent.</p>
+
+        <h3>Cultural Legibility</h3>
+        <p>Roles are part of the human symbolic canon — scribes, scouts, advisors, stewards. Encoding these roles into AI gives them legitimacy and intuitive resonance.</p>
+
+        <h2>3. Why They Are Necessary</h2>
+        <p>Without role primitives, immersive and agentic systems risk collapsing into generic assistants: powerful but shapeless, hard to trust, and difficult to scale socially.</p>
+        <ul>
+          <li><strong>Without boundaries:</strong> A single undifferentiated “AI assistant” invites scope creep, misuse, and blurred expectations.</li>
+          <li><strong>Without legibility:</strong> Users can’t predict what an agent will do, reducing adoption and trust.</li>
+          <li><strong>Without grooves:</strong> Multi-agent coordination becomes brittle; roles overlap and conflict.</li>
+        </ul>
+
+        <div class="pull">Role primitives carve "grooves" — stable behavioral lanes into which AI behaviors fall, creating predictability, interoperability, and trust.</div>
+
+        <h2>4. Role Grooves</h2>
+        <p>A role groove is the channel an archetypal role runs in — the stable behavioral and symbolic path that makes it recognizable and reliable.</p>
+        <ul>
+          <li><strong>Librarian Groove:</strong> retrieval, citation, epistemic trails.</li>
+          <li><strong>Companion Groove:</strong> conversational presence, emotional anchoring.</li>
+          <li><strong>Sentinel Groove:</strong> vigilance, boundary enforcement, neutrality.</li>
+          <li><strong>Butler Groove:</strong> discreet task orchestration, tactful service.</li>
+        </ul>
+        <p>Grooves don’t constrain creativity — they prevent drift. They are like lanes on a highway: keeping traffic orderly while allowing diverse vehicles to flow.</p>
+
+        <h2 id="specs">5. Implication</h2>
+        <p>Defining ten canonical role primitives is enough to establish the concept. They are demonstrative — the starter set that proves the framework. From here, ecosystems can extend or customize. But the groove system holds:</p>
+        <ul>
+          <li>Familiar names → predictable functions</li>
+          <li>Boundaries → user trust</li>
+          <li>Mesh integration → scalable orchestration</li>
+        </ul>
+        <p>Role primitives are the grammar of AI interaction in the AI, agentic and immersive age.</p>
+      </article>
+
+
+
+
+
+
+
+
+
+
+
+
+       
+        <!-- your article content here -->
+     
+    </div>
+
+    <aside class="toc" aria-label="In-page navigation">
+      <h4>On this page</h4>
+      <ul>
+        <li><a href="#keystone">1. What Role Primitives Are</a></li>
+        <li><a href="#keystone">2. Why They Matter</a></li>
+        <li><a href="#keystone">3. Why They Are Necessary</a></li>
+        <li><a href="#keystone">4. Role Grooves</a></li>
+        <li><a href="#specs">5. Implication & Specs</a></li>
+      </ul>
+      <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+        <div style="font-weight:600;margin-bottom:6px">Quick links</div>
+        <a href="/role-primitives/" style="display:block;margin-bottom:6px;text-decoration:none;color:var(--accent)">Full essay (long)</a>
+        <a href="/role-primitives/librarian" style="display:block;text-decoration:none;color:#0b1220">Librarian spec →</a>
+        <a href="/role-primitives/companion" style="display:block;text-decoration:none;color:#0b1220">Companion spec →</a>
+      </div>
+    </aside>
+
+    <footer class="pagefoot" role="contentinfo">
+      <p style="font-size:0.9em;color:gray;margin-top:0.6em">
+        <strong>Provenance:</strong><br>
+        Site live: 2025-07-29&nbsp;&nbsp;Keystone published: 2025-10-08<br>
+        Canonical source: <a href="https://github.com/semio9/my-static-site">GitHub repository</a><br>
+        <span id="last-updated-line">Last updated: <time id="last-updated" datetime=""></time></span>
+      </p>
+      <div>Draft v0.2 — Symbol Layer · Public Domain (CC0 1.0)</div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var lm = new Date(document.lastModified);
+      if (!isNaN(lm.getTime())) {
+        var y = lm.getFullYear();
+        var m = String(lm.getMonth() + 1).padStart(2, '0');
+        var d = String(lm.getDate()).padStart(2, '0');
+        var iso = y + '-' + m + '-' + d;
+        var t = document.getElementById('last-updated');
+        if (t) {
+          t.textContent = iso;
+          t.setAttribute('datetime', iso);
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
