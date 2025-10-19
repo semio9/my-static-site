@@ -269,21 +269,51 @@ beyond the meeting of our own personal needs.</p>
  </main>
   
   <hr>
-<p style="font-size:0.9em;color:gray">
-  <strong>Provenance:</strong><br>
-  First published at <a href="https://symbollayer.com">SymbolLayer.com</a>
-  · <span id="updated">Updated: —</span><br>
-  Canonical source: <a href="https://github.com/semio9/my-static-site">GitHub repository</a>
-</p>
-<script>
-  document.getElementById('updated').textContent =
-    'Updated: ' + new Date(document.lastModified).toISOString().slice(0,10);
-</script>
+
 <nav>
   <a href="/">Home</a> ·
   <a href="/about">About</a> ·
   <a href="/librarian.html">Librarian Spec</a>
 </nav>
+
+<p style="font-size:0.9em;color:gray;margin-top:0.6em">
+  <strong>Provenance:</strong><br>
+  First published: 2025-09-27&nbsp;&nbsp;Rendering fixed: 2025-09-27<br>
+  Canonical source: <a href="https://github.com/semio9/my-static-site">GitHub repository</a><br>
+  <span id="last-updated-line">Last updated: <time id="last-updated" datetime=""></time></span>
+</p>
+
+<script>
+  (function () {
+    // Automatically display the page's last-modified date in YYYY-MM-DD format
+    var lm = new Date(document.lastModified);
+    if (!isNaN(lm.getTime())) {
+      var y = lm.getFullYear();
+      var m = String(lm.getMonth() + 1).padStart(2, '0');
+      var d = String(lm.getDate()).padStart(2, '0');
+      var iso = y + '-' + m + '-' + d;
+
+      var t = document.getElementById('last-updated');
+      if (t) {
+        t.textContent = iso;
+        t.setAttribute('datetime', iso);
+      }
+    } else {
+      var line = document.getElementById('last-updated-line');
+      if (line) line.style.display = 'none';
+    }
+  })();
+</script>
+
+
+
+
+
+
+
+
+
+
   
 
 </body>
