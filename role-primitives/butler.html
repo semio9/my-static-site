@@ -213,7 +213,34 @@
 </p>
   
 
+<p style="font-size:0.9em;color:gray;margin-top:0.6em">
+  <strong>Provenance:</strong><br>
+  First published: 2025-10-19&nbsp;&nbsp;First archived: 2025-10-19<br>
+  Canonical source: <a href="https://github.com/symbollayer/symbollayer">GitHub repository</a><br>
+  <span id="last-updated-line">Last updated: <time id="last-updated" datetime=""></time></span>
+</p>
 
+<script>
+  (function () {
+    // Read the page's actual modification time and render as YYYY-MM-DD
+    var lm = new Date(document.lastModified);
+    if (!isNaN(lm.getTime())) {
+      var y = lm.getFullYear();
+      var m = String(lm.getMonth() + 1).padStart(2, '0');
+      var d = String(lm.getDate()).padStart(2, '0');
+      var iso = y + '-' + m + '-' + d;
+
+      var t = document.getElementById('last-updated');
+      if (t) {
+        t.textContent = iso;
+        t.setAttribute('datetime', iso);
+      }
+    } else {
+      var line = document.getElementById('last-updated-line');
+      if (line) line.style.display = 'none';
+    }
+  })();
+</script>
 
   
 
