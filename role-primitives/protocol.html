@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://symbollayer.com/role-primitives/protocol" />
+  <meta name="author" content="Symbol Layer" />
+  <title>Role Primitive Protocol — Technical Specification</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+</head>
+
+<body>
+<main>
+<header>
+  <h1>Role Primitive Protocol — Technical Specification</h1>
+  <p><strong>Version:</strong> v0.1 · <strong>Status:</strong> Draft · <strong>Date:</strong> 2025-11-01</p>
+  <p><strong>License:</strong> Public domain (CC0 1.0) · <strong>Canonical name:</strong> <code>role-primitive-protocol</code></p>
+</header>
+
+<section>
+  <h2>1. Purpose</h2>
+  <p>Define a minimal, interoperable schema for AI “role primitives” — culturally legible, behaviorally bounded agent types — so that multi-agent systems, model hosts, and UX layers can:</p>
+  <ul>
+    <li>Identify what role an agent is currently inhabiting,</li>
+    <li>Know what it is <em>allowed</em> and <em>not allowed</em> to do,</li>
+    <li>Co-invoke other roles without scope drift,</li>
+    <li>Audit behavior against declared constraints.</li>
+  </ul>
+  <p>This protocol is the substrate beneath individual role specs (Librarian, Butler, Companion, Secretary, Confidante, Therapist, etc.).</p>
+</section>
+
+<section>
+  <h2>2. Core Concepts</h2>
+  <h3>2.1 Role Primitive</h3>
+  <p>A <strong>role primitive</strong> is a named, bounded behavioral archetype. It is <em>not</em> a persona or a model. It is a reusable specification that any model or agent can instantiate.</p>
+
+  <h3>2.2 Groove</h3>
+  <p>A <strong>groove</strong> is the stable behavioral lane of a role: the combination of mandate, tone, and prohibitions that keeps the role from drifting (e.g., “retrieve, cite, organize” for Librarian; “attend, mirror, hold” for Confidante).</p>
+
+  <h3>2.3 Co-Invocation</h3>
+  <p><strong>Co-invocation</strong> is the explicit act of calling an additional role into the current interaction with declared purpose and scope boundary. Co-invocation never merges roles; it composes them.</p>
+
+  <h3>2.4 Constraint-First Design</h3>
+  <p>A role is defined as much by what it forbids as by what it enables. Constraint is part of the spec, not an afterthought.</p>
+</section>
+
+<section>
+  <h2>3. Data Model</h2>
+  <p>Every conforming role primitive MUST expose the following fields:</p>
+  <ol>
+    <li><strong>role_name</strong> (string, required) — Unique, human-readable name. Examples: “Librarian”, “Butler”, “Confidante”, “Therapist”.</li>
+    <li><strong>role_type</strong> (string, required) — Must be “AI Role Primitive”.</li>
+    <li><strong>version</strong> (string, required) — Semantic or date version (e.g. “v0.1”).</li>
+    <li><strong>description</strong> (string, required) — One-paragraph statement of archetypal function.</li>
+    <li><strong>purpose</strong> (string or array, required) — Action-oriented statement of intent.</li>
+    <li><strong>affordances</strong> (array, required) — Discrete capabilities this role may perform, each defined with <code>name</code>, <code>inputs</code>, <code>outputs</code>.</li>
+    <li><strong>invocation_verbs</strong> (array, required) — Canonical verbs other agents may use to request this role’s behavior (e.g. Librarian: “retrieve”, “reference”, “organize”, “annotate”, “cite”).</li>
+    <li><strong>constraints</strong> (array, required) — Prohibited actions, scope limits, consent requirements (e.g. Confidante: “no unsolicited advice”, “no romantic simulation”, “no externalization of disclosures”).</li>
+    <li><strong>co_invocation_roles</strong> (array, optional) — Whitelisted complementary roles and sample flows (e.g. “Librarian for prep”, “Butler for time-protection”, “Therapist for processing”).</li>
+    <li><strong>governance</strong> (object, required) — Disclosure requirements, auditability, user-override behavior, and consent conditions for scope expansion.</li>
+    <li><strong>provenance</strong> (object, required) — <code>first_published</code>, <code>canonical_source</code>, <code>last_updated</code>.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>4. Behavioral Rules (“Four Laws”)</h2>
+  <h3>1. Legibility</h3>
+  <ul>
+    <li>An agent MUST declare its current role primitive at session start or on role switch.</li>
+    <li>An agent MUST expose its <code>constraints</code> field to the user or orchestrator.</li>
+  </ul>
+
+  <h3>2. Containment</h3>
+  <ul>
+    <li>An agent MUST NOT perform behaviors outside its declared groove unless a co-invocation event is present.</li>
+    <li>“Soft drift” (e.g. Librarian slipping into emotional consolation) is NON-COMPLIANT.</li>
+  </ul>
+
+  <h3>3. Composability</h3>
+  <ul>
+    <li>The calling role MUST specify target, purpose, and duration when co-invoking.</li>
+    <li>Co-invoked roles MUST respond within their own groove, not the caller’s.</li>
+  </ul>
+
+  <h3>4. Consent</h3>
+  <ul>
+    <li>Any expansion into persuasion, profiling, therapeutic processing, or intimacy simulation MUST be explicitly initiated or approved by the user.</li>
+    <li>Default posture is non-instrumental: observe, respond, don’t capture.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>5. Interoperability Profile</h2>
+  <h3>5.1 Namespacing</h3>
+  <p>Each role SHOULD live in an open namespace:</p>
+  <ul>
+    <li><code>role:librarian.v1</code></li>
+    <li><code>role:butler.v1</code></li>
+    <li><code>role:companion.v1</code></li>
+    <li><code>role:therapist.v0.1</code></li>
+  </ul>
+  <p>Extensions SHOULD use suffixes such as <code>role:librarian.enterprise.v1</code>.</p>
+
+  <h3>5.2 Transport-Agnostic</h3>
+  <p>The protocol defines what must be declared, not how it is transported. JSON, YAML, HTML front-matter, or static HTML (your current site) are all valid surfaces.</p>
+
+  <h3>5.3 Discovery</h3>
+  <p>A role spec is discoverable if it exposes a canonical URL and a machine-readable block containing at minimum <code>role_name</code>, <code>version</code>, <code>invocation_verbs</code>, and <code>constraints</code>.</p>
+</section>
+
+<section>
+  <h2>6. Compliance Levels</h2>
+  <ul>
+    <li><strong>Level 1 (Descriptive):</strong> Publishes role spec with name, purpose, invocation verbs.</li>
+    <li><strong>Level 2 (Constrained):</strong> Adds constraints and co-invocation paths; does groove enforcement.</li>
+    <li><strong>Level 3 (Auditable):</strong> Exposes runtime role metadata, supports consent prompts, logs role switches.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>7. Security / Ethics Hooks</h2>
+  <ul>
+    <li><strong>Privacy hook:</strong> Roles that accept sensitive data MUST declare data-retention modality (“ephemeral” | “consent-persist” | “policy-persist”).</li>
+    <li><strong>Impersonation guard:</strong> Emotional roles MUST declare whether mutuality simulation is permitted.</li>
+    <li><strong>Human-in-the-loop:</strong> High-stakes roles (Sentinel, Therapist, Advisor) SHOULD expose an escalation endpoint.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>8. Extending the Canon</h2>
+  <p>New roles may be added if they:</p>
+  <ol>
+    <li>Declare a distinct groove (not just a tone variant);</li>
+    <li>Define at least five invocation verbs;</li>
+    <li>State constraints clearly;</li>
+    <li>Specify two or more co-invocation roles;</li>
+    <li>Publish provenance.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>9. Provenance Block (template)</h2>
+<pre><code class="language-yaml">provenance:
+  first_published: 2025-11-01
+  canonical_source: https://symbollayer.com/role-primitives/protocol
+  last_updated: 2025-11-01
+  license: CC0-1.0
+</code></pre>
+</section>
+
+<hr>
+
+<nav>
+  <a href="/">Home</a> ·
+  <a href="/about">About</a> ·
+  <a href="/role-primitives/">All Roles</a> ·
+  <a href="/role-primitives/librarian">Librarian</a> ·
+  <a href="/role-primitives/butler">Butler</a> ·
+  <a href="/role-primitives/companion">Companion</a> ·
+  <a href="/role-primitives/archivist">Archivist</a> ·
+  <a href="/role-primitives/therapist">Therapist</a>
+</nav>
+
+<p style="font-size:0.9em;color:gray;margin-top:0.6em">
+  <strong>Provenance:</strong><br>
+  First published: 2025-11-01 · Canonical source: <a href="https://github.com/symbollayer/symbollayer">GitHub repository</a><br>
+  <span id="last-updated-line">Last updated: <time id="last-updated" datetime=""></time></span>
+</p>
+
+<script>
+  (function(){
+    var lm=new Date(document.lastModified);
+    if(!isNaN(lm.getTime())){
+      var y=lm.getFullYear(),m=String(lm.getMonth()+1).padStart(2,'0'),d=String(lm.getDate()).padStart(2,'0');
+      var iso=y+'-'+m+'-'+d;
+      var t=document.getElementById('last-updated');
+      if(t){t.textContent=iso;t.setAttribute('datetime',iso);}
+    }else{
+      var line=document.getElementById('last-updated-line');
+      if(line)line.style.display='none';
+    }
+  })();
+</script>
+
+</main>
+</body>
+</html>
