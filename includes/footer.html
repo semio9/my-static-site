@@ -1,3 +1,4 @@
+
 <!-- ======================= -->
 <!-- Symbol Layer — Standard Footer Include -->
 <!-- File: /includes/footer.html -->
@@ -15,36 +16,13 @@
 
     <p style="font-size:0.9em;color:gray;margin-top:0.6em">
       <strong>Provenance:</strong><br>
-      Site live: 2025-07-29 · Canonical source: <a href="https://github.com/symbollayer/symbollayer">GitHub repository</a><br>
-      <span id="last-updated-line">Last updated: <time id="last-updated" datetime=""></time></span>
+      Site live: 2025-07-29 · Canonical source:
+      <a href="https://github.com/symbollayer/symbollayer">GitHub repository</a><br>
+      Site last updated: 2025-11-06
     </p>
+
     <div>Public Domain (CC0 1.0) · Symbol Layer</div>
   </footer>
-
-
-  <script>
-    (async function() {
-      const t = document.getElementById('last-updated');
-      const line = document.getElementById('last-updated-line');
-      const path = window.location.pathname.replace(/^\/+/, '');
-      const repo = 'symbollayer/symbollayer'; // change if repo name changes
-      let iso = '';
-
-      try {
-        const res = await fetch(`https://api.github.com/repos/${repo}/commits?path=${path}`);
-        if (res.ok) {
-          const data = await res.json();
-          if (data && data.length > 0 && data[0].commit && data[0].commit.committer) {
-            iso = data[0].commit.committer.date.substring(0, 10);
-          }
-        }
-      } catch (e) {
-        // ignore network errors; fallback below
-      }
-
-      if (!iso) {
-        const lm = new Date(document.lastM
-
 
 </body>
 </html>
