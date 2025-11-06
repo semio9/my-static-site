@@ -21,19 +21,30 @@
     <div>Public Domain (CC0 1.0) · Symbol Layer</div>
   </footer>
 
+
   <script>
-    (function(){
-      var lm=new Date(document.lastModified);
-      if(!isNaN(lm.getTime())){
-        var y=lm.getFullYear(),m=String(lm.getMonth()+1).padStart(2,'0'),d=String(lm.getDate()).padStart(2,'0');
-        var iso=y+'-'+m+'-'+d;
-        var t=document.getElementById('last-updated');
-        if(t){t.textContent=iso;t.setAttribute('datetime',iso);}
-      }else{
-        var line=document.getElementById('last-updated-line');
-        if(line)line.style.display='none';
+    (async function() {
+      const t = document.getElementById('last-updated');
+      const line = document.getElementById('last-updated-line');
+      const path = window.location.pathname.replace(/^\/+/, '');
+      const repo = 'symbollayer/symbollayer'; // change if repo name changes
+      let iso = '';
+
+      try {
+        const res = await fetch(`https://api.github.com/repos/${repo}/commits?path=${path}`);
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.length > 0 && data[0].commit && data[0].commit.committer) {
+            iso = data[0].commit.committer.date.substring(0, 10);
+          }
+        }
+      } catch (e) {
+        // ignore network errors; fallback below
       }
-    })();
-  </script>
+
+      if (!iso) {
+        const lm = new Date(document.lastM
+
+
 </body>
 </html>
