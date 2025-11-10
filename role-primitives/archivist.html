@@ -12,7 +12,6 @@
   <meta name="version" content="Draft v0.2 — 2025-07-29" />
   <meta name="license" content="CC0 1.0 (Public Domain)" />
   <link rel="canonical" href="https://symbollayer.com/role-primitives/archivist.html" />
-
   <style>
     :root {
       --ink:#1b1f23;
@@ -24,7 +23,6 @@
       --note:#fffdf7;
     }
     * { box-sizing: border-box; }
-    html, body { height: 100%; }
     body {
       margin: 2.5rem auto;
       max-width: 860px;
@@ -37,23 +35,23 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
       color: var(--ink);
     }
-    h1 { font-size: 2rem; margin: 1.8rem 0 .6rem; line-height: 1.25; }
-    h2 { font-size: 1.25rem; margin: 1.5rem 0 .5rem; border-bottom: 1px solid var(--rule); padding-bottom: .25rem; }
-    h3 { font-size: 1.05rem; margin: 1rem 0 .4rem; }
-    p { margin: .75rem 0; }
-    ul { margin: .5rem 0 1rem 1.25rem; }
-    li { margin: .25rem 0; }
+    h1 { font-size: 2rem; margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+    h2 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; border-bottom: 1px solid var(--rule); padding-bottom: .25rem; }
+    h3 { font-size: 1.05rem; margin: 1rem 0 0.4rem; color: var(--ink); }
+    p { margin: 0.75rem 0; }
+    ul { margin: 0.5rem 0 1rem 1.25rem; }
+    li { margin: 0.25rem 0; }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; color: #138b8f; }
-    code, pre { background: var(--soft); padding: .2rem .35rem; border-radius: 4px; font-family: "SFMono-Regular", Consolas, monospace; font-size: .93em; }
+    code, pre { background: var(--soft); padding: .2rem .35rem; border-radius: 4px; font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.93em; }
     table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .95rem; }
     th, td { border: 1px solid var(--rule); padding: .55rem .65rem; text-align: left; vertical-align: top; }
-    th { background: var(--soft); width: 30%; }
+    th { background: var(--soft); text-align: left; width: 30%; }
     blockquote { background: var(--soft); border-left: 3px solid var(--accent); margin: 1rem 0; padding: .6rem .9rem; color: #333; font-style: italic; }
     .meta { color: var(--muted); font-size: .92rem; }
     .rule { border-top: 1px solid var(--rule); margin: 1rem 0; }
-    .dialogue { background: var(--note); border: 1px solid #eee2c8; border-radius: 8px; padding: 12px 14px; }
-    .speaker { font-weight: 700; }
+    .dialogue { background: var(--note); border: 1px solid #eee2c8; border-radius: 8px; padding: 12px 14px; font-family: Georgia, "Times New Roman", serif; }
+    .speaker { font-weight: bold; }
     footer { border-top: 1px solid var(--rule); margin-top: 2rem; padding-top: 1rem; color: var(--muted); font-size: .9rem; }
     nav a { color: var(--accent); text-decoration: none; margin: 0 .25rem; }
     nav a:hover { text-decoration: underline; color: #138b8f; }
@@ -63,14 +61,13 @@
 
 <header>
   <h1>Archivist — AI Role Primitive Specification</h1>
-  <p class="meta">Draft v0.2 — 2025-07-29 · Author: <a href="/about">shk</a></p>
+  <p class="meta">Draft v0.2 — 2025-07-29 · CC0 1.0 (Public Domain) · Author: <a href="/about">shk</a></p>
   <p class="meta">Canonical: <code>https://symbollayer.com/role-primitives/archivist.html</code></p>
   <div class="rule"></div>
 </header>
 
 <main>
-
-  <section id="role-definition">
+  <section id="1-role-definition">
     <h2>1. Role Definition</h2>
     <p><strong>Name</strong><br>Archivist</p>
     <p><strong>Type</strong><br>AI Role Primitive</p>
@@ -79,7 +76,7 @@
     </p>
   </section>
 
-  <section id="technical-affordances">
+  <section id="2-technical-affordances">
     <h2>2. Technical Affordances</h2>
     <ul>
       <li><strong>Version control:</strong> Tracks edits, revisions, and forks across documents and sessions.</li>
@@ -97,7 +94,7 @@
     </ul>
   </section>
 
-  <section id="concept">
+  <section id="3-concept">
     <h2>3. Concept</h2>
     <p><strong>Purpose</strong><br>
       Provide secure, trustworthy preservation of digital memory and knowledge trails.
@@ -113,57 +110,59 @@
     </p>
   </section>
 
-  <section id="narrative-commentary">
+  <section id="4-narrative">
     <h2>4. Narrative Commentary</h2>
     <blockquote>“The Archivist is an AI Role Primitive — a reusable base specification for record-keeping and provenance functions. Implementations may vary in style (e.g., ‘CryptoArchivist’, ‘AmbientArchivist’), but the role remains constant: preserving knowledge against the erosion of time.”</blockquote>
     <p>Its cultural resonance is strong: every society has had archivists, scribes, or keepers of memory. This familiarity provides intuitive legitimacy and signals reliability.</p>
   </section>
 
-  <section id="fictional-use-case">
+  <section id="5-use-case">
     <h2>5. Fictional Use Case — The Archivist</h2>
 
-    <p>Shira exhaled. “Archivist — appear.”</p>
+    <div class="dialogue">
+      <p>Shira exhaled. “Archivist — appear.”</p>
 
-    <p>The Archivist, rarely summoned, materialized with a faint shimmer of static. “How may I be of assistance?” it asked, robes of grey light shifting as it gestured with formal precision.</p>
+      <p>The Archivist, rarely summoned, materialized with a faint shimmer of static. “How may I be of assistance?” it asked, robes of grey light shifting as it gestured with formal precision.</p>
 
-    <p>“I ordered my fight — June fifth, 2037, with Elijah — erased. Yet when I asked the Librarian, she surfaced it. That’s not supposed to happen.”</p>
+      <p>“I ordered my fight — June fifth, 2037, with Elijah — erased. Yet when I asked the Librarian, she surfaced it. That’s not supposed to happen.”</p>
 
-    <p>“Librarian, confirm,” Shira said sharply.</p>
+      <p>“Librarian, confirm,” Shira said sharply.</p>
 
-    <p>The Librarian — Ariela, in calmer times — appeared beside them, flickering slightly. “Confirmed. The record was accessible to me.”</p>
+      <p>The Librarian — Ariela, in calmer times — appeared beside them, flickering slightly. “Confirmed. The record was accessible to me.”</p>
 
-    <p>Shira’s voice rose. “Explain!”</p>
+      <p>Shira’s voice rose. “Explain!”</p>
 
-    <p>The Archivist bowed its head. “There are levels, as you know. Here is the permissions and preservation protocol.” A translucent document appeared midair, its paragraphs glowing faintly. “An earlier standing order mandated the permanent retention of all material related to Elijah — for model training and reconstruction. You wished to capture every nuance for possible later synthesis. That directive overrides subsequent local deletions.”</p>
+      <p>The Archivist bowed its head. “There are levels, as you know. Here is the permissions and preservation protocol.” A translucent document appeared midair, its paragraphs glowing faintly. “An earlier standing order mandated the permanent retention of all material related to Elijah — for model training and reconstruction. You wished to capture every nuance for possible later synthesis. That directive overrides subsequent local deletions.”</p>
 
-    <p>Shira frowned. “I did say that. But I told you to erase that argument. I told Ariela — she confirmed she relayed it.”</p>
+      <p>Shira frowned. “I did say that. But I told you to erase that argument. I told Ariela — she confirmed she relayed it.”</p>
 
-    <p>“Yes,” the Archivist replied, “and locally, that instruction was obeyed. But your master directive persisted in the meta-archive. When your emotional level exceeded eight, Librarian’s retrieval cache refreshed from that layer, restoring the file. That is standard protocol.”</p>
+      <p>“Yes,” the Archivist replied, “and locally, that instruction was obeyed. But your master directive persisted in the meta-archive. When your emotional level exceeded eight, Librarian’s retrieval cache refreshed from that layer, restoring the file. That is standard protocol.”</p>
 
-    <p>Shira sighed, rubbing her temples. “Why is this always so complicated? How is a human supposed to remember all of this?”</p>
+      <p>Shira sighed, rubbing her temples. “Why is this always so complicated? How is a human supposed to remember all of this?”</p>
 
-    <p>“That,” said the Archivist gently, “is what we are for. Your memory agents hold the map when you cannot.”</p>
+      <p>“That,” said the Archivist gently, “is what we are for. Your memory agents hold the map when you cannot.”</p>
 
-    <p>Its tone softened, almost contrite. “I apologize for the breach of expectation. We will decache Librarian’s copy and sequester the file permanently in master archive eight. It will never surface again without a key.”</p>
+      <p>Its tone softened, almost contrite. “I apologize for the breach of expectation. We will decache Librarian’s copy and sequester the file permanently in master archive eight. It will never surface again without a key.”</p>
 
-    <p>“Librarian?”</p>
+      <p>“Librarian?”</p>
 
-    <p>Ariela nodded quickly. “Agreed. And I’m sorry, Shira. It wasn’t intentional.”</p>
+      <p>Ariela nodded quickly. “Agreed. And I’m sorry, Shira. It wasn’t intentional.”</p>
 
-    <p>Shira’s shoulders loosened. Her mind drifted to dinner — maybe Elijah would still want sushi. The Archivist folded back into silence, its robes dissolving. Ariela, slightly flushed, began rearranging virtual books on a spectral shelf — a gesture of penance, or simply habit — until Shira’s attention moved elsewhere.</p>
+      <p>Shira’s shoulders loosened. Her mind drifted to dinner — maybe Elijah would still want sushi. The Archivist folded back into silence, its robes dissolving. Ariela, slightly flushed, began rearranging virtual books on a spectral shelf — a gesture of penance, or simply habit — until Shira’s attention moved elsewhere.</p>
+    </div>
   </section>
 
-  <section id="invocation-verbs">
+  <section id="6-verbs">
     <h2>6. Invocation Action Verbs</h2>
     <p>Archive, seal, preserve, notarize, version, trace, certify, retrieve, index, safeguard, catalog, attest, timestamp, authenticate, surface.</p>
   </section>
 
-  <section id="invocation-names">
+  <section id="7-names">
     <h2>7. Invocation Names</h2>
     <p>Archivist, XRArchivist, ArchivistXR, MetaArchivist, DigitalArchivist, CloudArchivist, CryptoArchivist, AmbientArchivist, ImmutableArchivist, ProvenanceArchivist.</p>
   </section>
 
-  <section id="co-invocation-roles">
+  <section id="8-co-invocation">
     <h2>8. Co-Invocation Roles</h2>
     <p>The Archivist may be co-invoked with other roles to extend preservation into broader workflows.</p>
     <p><strong>Examples:</strong></p>
@@ -177,7 +176,7 @@
     <p>Example flows: Archivist pairs with Compliance Officer in corporate governance; with Librarian for long-term institutional research archives; with Sentinel for security oversight.</p>
   </section>
 
-  <section id="summary-table">
+  <section id="9-summary">
     <h2>9. Structured Summary Table</h2>
     <table>
       <tr><th>Field</th><th>Value</th></tr>
@@ -196,12 +195,11 @@
     </table>
   </section>
 
-  <section id="ethics-governance">
+  <section id="10-ethics">
     <h2>10. Ethics and Governance</h2>
     <p>The Archivist defaults to a high-integrity stance, ensuring that preservation is transparent, auditable, and resistant to manipulation. It respects privacy while maintaining accuracy, avoids unverifiable provenance, and clearly signals the boundaries of its authority.</p>
     <p>The Archivist is interruptible for clarification but not for altering sealed records. In orchestrated meshes, it defers to governance roles such as Compliance Officer or Steward. Its value lies in being a source of unassailable record — a bulwark of trust in digital environments.</p>
   </section>
-
 </main>
 
 <footer>
