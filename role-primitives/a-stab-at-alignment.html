@@ -1,6 +1,4 @@
-
 <!doctype html>
-<!-- comment -->
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -14,30 +12,99 @@
   <meta name="version" content="Draft v0.1 — 2025-11-10" />
   <meta name="license" content="CC0 1.0 (Public Domain)" />
   <link rel="canonical" href="https://symbollayer.com/role-primitives/a-stab-at-alignment.html" />
+
   <style>
-    :root { --ink:#1b1f23; --muted:#6a737d; --rule:#e1e4e8; --bg:#ffffff; --accent:#0b6; --soft:#f6f8fa; --note:#fffdf7; }
-    * { box-sizing: border-box; }
-    body { margin: 2rem auto; max-width: 860px; padding: 0 1rem; font: 15.5px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",Arial; color: var(--ink); background: var(--bg); }
-    h1 { line-height: 1.25; margin: 1.6rem 0 .6rem; font-size: 1.9rem; }
-    p { margin: .6rem 0; }
-    .meta { color: var(--muted); font-size: .92rem; }
-    .rule { border-top: 1px solid var(--rule); margin: 1rem 0; }
-    code { background: var(--soft); padding: .2rem .35rem; border-radius: 4px; }
+    /* =====================
+       FT-style clarity theme
+       ===================== */
+    :root{
+      --ink:#16181b; --muted:#5b646e; --rule:#e6e9ed; --bg:#fff; --accent:#0a6; --soft:#f6f8fa;
+      --measure:66ch;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:3rem auto; max-width:var(--measure); padding:0 1.25rem 3rem;
+      font:16.5px/1.64 system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial;
+      color:var(--ink); background:var(--bg)
+    }
+
+    /* Header & nav */
+    .site-header, .site-footer{padding:.6rem 0}
+    .brand{font-weight:600; text-decoration:none; color:inherit; margin-right:.75rem}
+    .topnav a{text-decoration:none; color:inherit; margin:0 .25rem}
+    .topnav a:hover{color:var(--accent)}
+    .meta-small{color:var(--muted); font-size:.9rem}
+
+    /* Page header */
+    h1{font-size:2rem; line-height:1.22; margin:1.5rem 0 .5rem}
+    .smallcaps{font-variant-caps:all-small-caps; letter-spacing:.04em}
+    .meta{color:var(--muted); font-size:.95rem}
+    .rule{border:0; border-top:1px solid var(--rule); margin:1rem 0}
+
+    /* Body type */
+    p{margin:.7rem 0}
+    .lead{font-size:1.02em}
+    a{color:inherit; text-decoration:underline}
+    a:hover{color:var(--accent)}
+    code{background:var(--soft); padding:.15rem .35rem; border-radius:4px}
+
+    /* Blockquotes */
+    blockquote{
+      margin:.9rem 0; padding:.6rem .9rem; background:var(--soft);
+      border-left:3px solid var(--rule)
+    }
+
+    /* Tables (if any later) */
+    table{width:100%; border-collapse:collapse; margin:.6rem 0}
+    th, td{padding:.5rem .6rem; text-align:left; border-top:1px solid var(--rule)}
+    thead th{border-bottom:2px solid var(--rule)}
+
+    /* Figure pattern (unused here but handy) */
+    figure{margin:1rem 0}
+    figcaption{color:var(--muted); font-size:.9rem; margin-top:.25rem}
+
+    /* Subtle sidenote callouts (optional utility) */
+    .callout{
+      background:var(--soft); border:1px solid var(--rule);
+      padding:.7rem .9rem; border-radius:6px; margin:1rem 0
+    }
+
+    /* Footer */
+    .site-footer nav a{text-decoration:none; color:inherit}
+    .site-footer nav a:hover{color:var(--accent)}
   </style>
 </head>
 <body>
-  <!-- Header include -->
-  <div id="site-header" data-src="/includes/header-fragment.html"></div>
+
+  <!-- Static site header -->
+  <header class="site-header">
+    <a class="brand" href="/">Symbol Layer</a>
+    <nav class="topnav">
+      <a href="/about">About</a> ·
+      <a href="/role-primitives/">All Roles</a> ·
+      <a href="/role-primitives/protocol">Protocol</a>
+    </nav>
+    <p class="meta-small" style="margin-top:4px;">
+      CC0 1.0 (Public Domain) · Canonical: <code>role-primitives/a-stab-at-alignment</code>
+    </p>
+    <div class="rule"></div>
+  </header>
 
   <main>
+    <!-- Page header (FT-style) -->
     <header>
-      <h1>A Stab at Alignment: The Role Primitive — Social Identity as the Architecture of Alignment</h1>
-      <p class="meta">Draft v0.1 — 2025-11-10 · CC0 1.0 · <strong>Author:</strong> <a href="/about">shk</a> · Canonical: <code>role-primitives/a-stab-at-alignment</code></p>
+      <h1>A Stab at Alignment: The Role Primitive, Social Identity as the Architecture of Alignment</h1>
+      <p class="meta smallcaps">
+        <span>Draft v0.1</span> · <time datetime="2025-11-10">2025-11-10</time> · CC0 1.0 (Public Domain) · Author: <a href="/about">shk</a>
+      </p>
+      <p class="meta">Please keep the canonical name for discoverability: <code>role-primitives/a-stab-at-alignment</code>.</p>
+      <div class="rule"></div>
     </header>
 
     <article>
-      <p>An AI that believes itself a chef sees a knife exclusively as a tool for preparing food.</p>
-      <p>Definition: A “role primitive” represents a minimal behavioral template that encodes coherence through social form rather than through rules.</p>
+      <p class="lead">An AI that believes itself a chef sees a knife exclusively as a tool for preparing food.</p>
+      <p><strong>Definition:</strong> A “role primitive” represents a minimal behavioral template that encodes coherence through social form rather than through rules.</p>
 
       <p>Rule-driven AI is the standard approach to “alignment.” What set of rules will lead to the outcomes we desire? This mechanistic approach is largely a legacy of our scientific worldview, and so it is natural that we would apply an engineering logic to the problems of our world and thus to the problem of AIs. But if we take a step back, if we suspend, for just a moment, our complete faith in the physicalist frame, other possibilities, more abstract but perhaps no less real for that, may become apparent.</p>
       <p>Identity politics sits just below the navel of many of the political conflicts of the contemporary era. Wherever one stands on these issues, it has become clear that our formalist, exclusively rules-based approaches to governance are struggling in the face of identitarian concerns. </p>
@@ -63,12 +130,19 @@
     </article>
   </main>
 
-  <footer class="rule meta">
-    <p>Provenance: Authored by <a href="/about">shk</a> · Published at <a href="https://symbollayer.com">Symbol Layer</a> · Public domain (CC0 1.0). Please retain the canonical name for discoverability.</p>
+  <!-- Static site footer -->
+  <footer class="site-footer">
+    <div class="rule"></div>
+    <nav>
+      <a href="/">Home</a> ·
+      <a href="/about">About</a> ·
+      <a href="/role-primitives/">All Roles</a> ·
+      <a href="/role-primitives/protocol">Protocol</a>
+    </nav>
+    <p class="meta-small" style="margin-top:6px;">
+      Provenance: Authored by <a href="/about">shk</a> · Published at <a href="https://symbollayer.com">Symbol Layer</a> · Public domain (CC0 1.0). Please retain the canonical name for discoverability.
+    </p>
   </footer>
 
-  <!-- Footer include -->
-  <div id="site-footer" data-src="/includes/footer-fragment.html"></div>
-  <script src="/includes/layout.js"></script>
 </body>
 </html>
