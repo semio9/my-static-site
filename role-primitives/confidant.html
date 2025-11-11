@@ -16,21 +16,74 @@
   
 
   <link rel="stylesheet" href="/css/style.css">  
-  
-table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.95rem; }
-th, td { border:1px solid var(--rule); padding:.55rem .65rem; text-align:left; vertical-align:top; background:#fff; }
-th { font-weight:bold; width:30%; }
-/* no thead background, no zebra striping */
+
+<style>
+  :root {
+    --ink:#1b1f23;
+    --muted:#6a737d;
+    --rule:#e1e4e8;
+    --bg:#ffffff;
+    --accent:#1a9fa3;
+    --soft:#f6f8fa;
+    --note:#fffdf7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 2.5rem auto;
+    max-width: 860px;
+    padding: 0 1.2rem 3rem;
+    font: 16px/1.65 Georgia, "Times New Roman", serif;
+    color: var(--ink);
+    background: var(--bg);
+  }
+  h1, h2, h3 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+  }
+  h1 { font-size: 2rem; margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+  h2 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; border-bottom: 1px solid var(--rule); padding-bottom: .25rem; }
+  h3 { font-size: 1.05rem; margin: 1rem 0 0.4rem; color: var(--ink); }
+  p { margin: 0.75rem 0; }
+  ul { margin: 0.5rem 0 1rem 1.25rem; }
+  li { margin: 0.25rem 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; color: #138b8f; }
+  code, pre { background: var(--soft); padding: .2rem .35rem; border-radius: 4px; font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.93em; }
+
+  /* neutral table — white cells, subtle rule only */
+  table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.95rem; }
+  th, td { border:1px solid var(--rule); padding:.55rem .65rem; text-align:left; vertical-align:top; background:#fff; }
+  th { font-weight:bold; width:30%; }
+
+  blockquote { background: var(--soft); border-left: 3px solid var(--accent); margin: 1rem 0; padding: .6rem .9rem; color: #333; font-style: italic; }
+  .meta { color: var(--muted); font-size: .92rem; }
+  .rule { border-top: 1px solid var(--rule); margin: 1rem 0; }
+  .dialogue { background: var(--note); border: 1px solid #eee2c8; border-radius: 8px; padding: 12px 14px; font-family: Georgia, "Times New Roman", serif; }
+  .speaker { font-weight: bold; }
+  footer { border-top: 1px solid var(--rule); margin-top: 2rem; padding-top: 1rem; color: var(--muted); font-size: .9rem; }
+  nav a { color: var(--accent); text-decoration: none; margin: 0 .25rem; }
+  nav a:hover { text-decoration: underline; color: #138b8f; }
+  dl { margin: 0.25rem 0 1rem; }
+  dt { font-weight: bold; }
+  dd { margin: 0 0 .6rem 0; }
+</style>
+
+
+
   
 <link rel="icon" type="image/png" href="data:image/png;base64,..."/>
 </head>
+
 <body>
-<main>
 <header>
-  <h1>Confidant: AI Role Primitive Specification</h1>
-  <p><strong>Draft v0.1</strong> — 2025-11-01</p>
-  <p>This pattern is public domain. Use freely. Please keep the name “Confidant Role Primitive” so others can find it.</p>
+  <h1>Confidant — AI Role Primitive Specification</h1>
+  <p class="meta"><strong>Draft v0.1</strong> — 2025-11-01</p>
+  <div class="rule"></div>
+  <p class="meta">ROLE PRIMITIVES</p>
+  <p class="meta">This pattern is public domain. Use freely. Please keep the name “Confidant Role Primitive” so others can find it.</p>
 </header>
+<main>
+
 
 
 <section>
@@ -224,12 +277,18 @@ th { font-weight:bold; width:30%; }
 <hr>
 
 
+<footer>
+  <nav>
+    <a href="/">Home</a> ·
+    <a href="/about">About</a>
+  </nav>
+  <p>
+    Provenance: First published at <a href="https://symbollayer.com">Symbol Layer</a> ·
+    Canonical: <code>https://symbollayer.com/role-primitives/confidant.html</code> ·
+    Public domain (CC0 1.0). Please retain the canonical name for discoverability.
+  </p>
+</footer>
 
-
-<nav>
-  <a href="/">Home</a> ·
-  <a href="/about">About</a>
-</nav>
 
 
 
