@@ -3,15 +3,19 @@
 <head>
   <meta charset="utf-8" />
 
-
-  <title>Butler</title>
+  <title>Butler — AI Role Primitive Specification | Symbol Layer</title>
+  <meta name="title" content="Butler — AI Role Primitive Specification | Symbol Layer" />
+  <meta name="description" content="Archetypal service and logistics agent — a discreet, reliable presence for managing personal routines, schedules, and environments." />
+  <meta name="canonical-name" content="role-primitives/butler" />
+  <meta name="author" content="shk" />
+  <meta name="author-url" content="https://symbollayer.com/about" />
+  <meta name="version" content="Draft v0.1 — 2025-11-01" />
+  <meta name="license" content="CC0 1.0 (Public Domain)" />
+  <link rel="canonical" href="https://symbollayer.com/role-primitives/butler.html" />
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=6">
- 
-  
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="canonical-name" content="role-primitives/butler" />
-  <link rel="canonical" href="https://symbollayer.com/role-primitives/butler" />
+
   <style>
     :root {
       --ink:#1b1f23;
@@ -45,16 +49,10 @@
     a:hover { text-decoration: underline; color: #138b8f; }
     code, pre { background: var(--soft); padding: .2rem .35rem; border-radius: 4px; font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.93em; }
 
-    /* neutral table style — white background, subtle rule only */
+    /* Advisor-standard table */
     table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .95rem; }
-    th, td {
-      border: 1px solid var(--rule);
-      padding: .55rem .65rem;
-      text-align: left;
-      vertical-align: top;
-      background: #fff;
-    }
-    th { font-weight: bold; width: 30%; }
+    th, td { border: 1px solid var(--rule); padding: .55rem .65rem; text-align: left; vertical-align: top; }
+    th { background: var(--soft); width: 30%; }
 
     blockquote { background: var(--soft); border-left: 3px solid var(--accent); margin: 1rem 0; padding: .6rem .9rem; color: #333; font-style: italic; }
     .meta { color: var(--muted); font-size: .92rem; }
@@ -64,19 +62,16 @@
     footer { border-top: 1px solid var(--rule); margin-top: 2rem; padding-top: 1rem; color: var(--muted); font-size: .9rem; }
     nav a { color: var(--accent); text-decoration: none; margin: 0 .25rem; }
     nav a:hover { text-decoration: underline; color: #138b8f; }
-    dl { margin: 0.25rem 0 1rem; }
-    dt { font-weight: bold; }
-    dd { margin: 0 0 .6rem 0; }
   </style>
 </head>
 <body>
 
 <header>
   <h1>Butler — AI Role Primitive Specification</h1>
-  <p class="meta"><strong>2025-11-01</strong></p>
+  <p class="meta">Draft v0.1 — 2025-11-01 · CC0 1.0 (Public Domain) · Author: <a href="/about">shk</a></p>
+  <p class="meta">Canonical: <code>https://symbollayer.com/role-primitives/butler.html</code></p>
   <div class="rule"></div>
-  <p class="meta">ROLE PRIMITIVES</p>
-  <p class="meta">This pattern is public domain. Use freely. Please keep the name “Butler Role Primitive” so others can find it.</p>
+  <p class="meta">Archetypal service and logistics agent — a discreet, reliable presence for managing personal routines, schedules, and environments.</p>
 </header>
 
 <main>
@@ -214,8 +209,7 @@
 
     <p>The Butler is designed as an instrument of calm efficiency and grace — always interruptible, auditable, and open to correction. Broader governance questions for autonomous service agents may be addressed in later specifications.</p>
   </section>
-
-  <div class="rule"></div>
+</main>
 
 <footer>
   <nav>
@@ -224,30 +218,10 @@
   </nav>
   <p>
     Provenance: First published at <a href="https://symbollayer.com">Symbol Layer</a> ·
-    Canonical: <code>https://symbollayer.com/role-primitives/butler</code> ·
+    Canonical: <code>https://symbollayer.com/role-primitives/butler.html</code> ·
     Public domain (CC0 1.0). Please retain the canonical name for discoverability.
   </p>
 </footer>
-
-<script>
-  (function () {
-    var lm = new Date(document.lastModified);
-    if (!isNaN(lm.getTime())) {
-      var y = lm.getFullYear();
-      var m = String(m.getMonth ? lm.getMonth() + 1 : 0).toString().padStart(2, '0');
-      var d = String(lm.getDate()).padStart(2, '0');
-      var iso = y + '-' + m + '-' + d;
-      var t = document.getElementById('last-updated');
-      if (t) {
-        t.textContent = iso;
-        t.setAttribute('datetime', iso);
-      }
-    } else {
-      var line = document.getElementById('last-updated-line');
-      if (line) line.style.display = 'none';
-    }
-  })();
-</script>
 
 </body>
 </html>
