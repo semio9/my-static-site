@@ -38,9 +38,18 @@
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; color: #138b8f; }
     code, pre { background: var(--soft); padding: .2rem .35rem; border-radius: 4px; font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.93em; }
+
+    /* neutral table style — white background, subtle rule only */
     table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .95rem; }
-    th, td { border: 1px solid var(--rule); padding: .55rem .65rem; text-align: left; vertical-align: top; }
-    th { background: var(--soft); width: 30%; }
+    th, td {
+      border: 1px solid var(--rule);
+      padding: .55rem .65rem;
+      text-align: left;
+      vertical-align: top;
+      background: #fff;
+    }
+    th { font-weight: bold; width: 30%; }
+
     blockquote { background: var(--soft); border-left: 3px solid var(--accent); margin: 1rem 0; padding: .6rem .9rem; color: #333; font-style: italic; }
     .meta { color: var(--muted); font-size: .92rem; }
     .rule { border-top: 1px solid var(--rule); margin: 1rem 0; }
@@ -176,20 +185,17 @@
   <section id="8-summary-table">
     <h2>8. Structured Summary Table</h2>
     <table>
-      <thead>
-        <tr><th>Field</th><th>Value</th></tr>
-      </thead>
       <tbody>
-        <tr><td>Role Name</td><td>Butler</td></tr>
-        <tr><td>Type</td><td>AI Role Primitive</td></tr>
-        <tr><td>Core Function</td><td>Service, logistics, anticipatory orchestration, and etiquette management</td></tr>
-        <tr><td>Environments</td><td>XR, spatial, metaverse, immersive, ambient</td></tr>
-        <tr><td>Key Affordances</td><td>Task orchestration, environment prep, contextual filtering, coordination, decorum management, personal upkeep, interoperable endpoints</td></tr>
-        <tr><td>Operational Constraints</td><td>No override of user choices; limited anticipation; no unauthorized financial/legal actions</td></tr>
-        <tr><td>Invocation Verbs</td><td>Arrange, prepare, remind, anticipate, manage, schedule, configure, tidy, set, present, filter, coordinate, compose, assist, optimize</td></tr>
-        <tr><td>Behavioral Signature</td><td>Discreet, anticipatory, polished, tactful, unintrusive</td></tr>
-        <tr><td>Example Flows</td><td>Prepares context before meetings; filters inputs during focus periods; coordinates follow-ups post-engagement</td></tr>
-        <tr><td>Infrastructure Hooks</td><td>Productivity APIs, communication tools, IoT systems, ambient controls</td></tr>
+        <tr><th>Role Name</th><td>Butler</td></tr>
+        <tr><th>Type</th><td>AI Role Primitive</td></tr>
+        <tr><th>Core Function</th><td>Service, logistics, anticipatory orchestration, and etiquette management</td></tr>
+        <tr><th>Environments</th><td>XR, spatial, metaverse, immersive, ambient</td></tr>
+        <tr><th>Key Affordances</th><td>Task orchestration, environment prep, contextual filtering, coordination, decorum management, personal upkeep, interoperable endpoints</td></tr>
+        <tr><th>Operational Constraints</th><td>No override of user choices; limited anticipation; no unauthorized financial/legal actions</td></tr>
+        <tr><th>Invocation Verbs</th><td>Arrange, prepare, remind, anticipate, manage, schedule, configure, tidy, set, present, filter, coordinate, compose, assist, optimize</td></tr>
+        <tr><th>Behavioral Signature</th><td>Discreet, anticipatory, polished, tactful, unintrusive</td></tr>
+        <tr><th>Example Flows</th><td>Prepares context before meetings; filters inputs during focus periods; coordinates follow-ups post-engagement</td></tr>
+        <tr><th>Infrastructure Hooks</th><td>Productivity APIs, communication tools, IoT systems, ambient controls</td></tr>
       </tbody>
     </table>
   </section>
@@ -205,8 +211,6 @@
 
   <div class="rule"></div>
 
-
-
 <footer>
   <nav>
     <a href="/">Home</a> ·
@@ -219,13 +223,12 @@
   </p>
 </footer>
 
-
 <script>
   (function () {
     var lm = new Date(document.lastModified);
     if (!isNaN(lm.getTime())) {
       var y = lm.getFullYear();
-      var m = String(lm.getMonth() + 1).padStart(2, '0');
+      var m = String(m.getMonth ? lm.getMonth() + 1 : 0).toString().padStart(2, '0');
       var d = String(lm.getDate()).padStart(2, '0');
       var iso = y + '-' + m + '-' + d;
       var t = document.getElementById('last-updated');
