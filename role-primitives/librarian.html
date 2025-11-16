@@ -81,7 +81,24 @@
 </head>
 
 
+  <body>
+
+
 <main>
+
+
+
+<header>
+  <h1>Librarian — AI Role Primitive Specification</h1>
+  <p class="meta">Draft v0.2 — 2025-07-03 · CC0 1.0 (Public Domain) · Author: <a href="/about">shk</a></p>
+  <p class="meta">Canonical: <code>https://symbollayer.com/role-primitives/librarian.html</code></p>
+  <div class="rule"></div>
+  <p class="meta">Archetypal knowledge-retrieval agent — a living archive, session threadkeeper, and epistemic trail manager. Helps users navigate vast, multimodal digital libraries in immersive, spatial, XR, metaverse, and ambient environments.</p>
+</header>
+
+  
+
+  
 <section id="1-role-definition">
   <h2>1. Role Definition</h2>
  
@@ -206,7 +223,6 @@
 <section id="6-verbs">
   <h2>6. Invocation Action Verbs</h2>
 
-  <h2>6. Invocation Action Verbs</h2>
   <p>These verbs define the primary actions a <em>Librarian</em> instance can be asked to perform, keeping the role legible and interoperable across contexts.</p>
   <ul>
     <li>Retrieve</li>
@@ -235,8 +251,13 @@
   <p><strong>Example flows:</strong> The Librarian pairs with the Synthesizer to distill insights from large knowledge sets, or with the Interpreter to translate source material in-context. In enterprise contexts, the Librarian may co-invoke with a Compliance Officer or Auditor for regulated knowledge tasks.</p>
 </section>
 
-<section>
+
+
+
+
+<section id="8-summary">
   <h2>8. Structured Summary Table</h2>
+
   <table>
     <thead>
       <tr>
@@ -291,10 +312,6 @@
 </section>
 
 
-<section id="8-summary">
-  <h2>8. Structured Summary Table</h2>
-  <!-- keep your table content -->
-</section>
 
 
 
@@ -311,9 +328,6 @@
 </main>
 
 
-<hr>
-
-</main>
 
 
 
@@ -332,29 +346,6 @@
 
 
   
-
-
-<script>
-  (function () {
-    // Use the file’s actual modification date to show the update timestamp
-    var lm = new Date(document.lastModified);
-    if (!isNaN(lm.getTime())) {
-      var y = lm.getFullYear();
-      var m = String(lm.getMonth() + 1).padStart(2, '0');
-      var d = String(lm.getDate()).padStart(2, '0');
-      var iso = y + '-' + m + '-' + d;
-
-      var t = document.getElementById('last-updated');
-      if (t) {
-        t.textContent = iso;
-        t.setAttribute('datetime', iso);
-      }
-    } else {
-      var line = document.getElementById('last-updated-line');
-      if (line) line.style.display = 'none';
-    }
-  })();
-</script>
   
   
 
