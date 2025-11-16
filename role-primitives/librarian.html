@@ -5,40 +5,86 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1">  <link rel="canonical" href="https://symbollayer.com/librarian.html">
-<meta name="author" content="shk"><!-- Author: shk | https://symbollayer.com/about -->
-  
-  <title>Librarian Role Primitive Spec</title>
-  
-
-<link rel="stylesheet" href="/css/style.css">  
 
 
 
-
-
-
-
-
-  
-</head>
-  
-<link rel="icon" type="image/png" href="data:image/png;base64,..."/>
-</head>
-<body>
-<main>
 <header>
-  <h1>Librarian: AI Role Primitive Specification</h1>
-  <p><strong>Draft v0.2</strong> — 2025-07-03</p>
-  <p>This pattern is public domain. Use freely. Please keep the name “Librarian Role Primitive” so others can find it.</p>
+  <h1>Librarian — AI Role Primitive Specification</h1>
+  <p class="meta">Draft v0.2 — 2025-07-03 · CC0 1.0 (Public Domain) · Author: <a href="/about">shk</a></p>
+  <p class="meta">Canonical: <code>https://symbollayer.com/role-primitives/librarian.html</code></p>
+  <div class="rule"></div>
+  <p class="meta">Archetypal knowledge-retrieval agent — a living archive, session threadkeeper, and epistemic trail manager. Helps users navigate vast, multimodal digital libraries in immersive, spatial, XR, metaverse, and ambient environments.</p>
 </header>
 
+  
 
-<section>
+
+<head>
+  <meta charset="utf-8" />
+
+  <title>Librarian  .  AI Role Primitive Specification | Symbol Layer</title>
+  <meta name="title" content="Librarian  .  AI Role Primitive Specification | Symbol Layer" />
+  <meta name="description" content="The Librarian is an archetypal knowledge-retrieval agent — a living archive, session threadkeeper, and epistemic trail manager in immersive, spatial, and ambient environments." />
+  <meta name="canonical-name" content="role-primitives/librarian" />
+  <meta name="author" content="shk" />
+  <meta name="author-url" content="https://symbollayer.com/about" />
+  <meta name="version" content="Draft v0.2 — 2025-07-03" />
+  <meta name="license" content="CC0 1.0 (Public Domain)" />
+  <link rel="canonical" href="https://symbollayer.com/role-primitives/librarian.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=6">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    :root {
+      --ink:#1b1f23;
+      --muted:#6a737d;
+      --rule:#e1e4e8;
+      --bg:#ffffff;
+      --accent:#1a9fa3;
+      --soft:#f6f8fa;
+      --note:#fffdf7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 2.5rem auto;
+      max-width: 860px;
+      padding: 0 1.2rem 3rem;
+      font: 16px/1.65 Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    h1, h2, h3 {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+    }
+    h1 { font-size: 2rem; margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+    h2 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; border-bottom: 1px solid var(--rule); padding-bottom: .25rem; }
+    h3 { font-size: 1.05rem; margin: 1rem 0 0.4rem; color: var(--ink); }
+    p { margin: 0.75rem 0; }
+    ul { margin: 0.5rem 0 1rem 1.25rem; }
+    li { margin: 0.25rem 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; color: #138b8f; }
+    code, pre { background: var(--soft); padding: .2rem .35rem; border-radius: 4px; font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.93em; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .95rem; }
+    th, td { border: 1px solid var(--rule); padding: .55rem .65rem; text-align: left; vertical-align: top; }
+    th { width: 30%; }
+    blockquote { background: var(--soft); border-left: 3px solid var(--accent); margin: 1rem 0; padding: .6rem .9rem; color: #333; font-style: italic; }
+    .meta { color: var(--muted); font-size: .92rem; }
+    .rule { border-top: 1px solid var(--rule); margin: 1rem 0; }
+    .dialogue { background: var(--note); border: 1px solid #eee2c8; border-radius: 8px; padding: 12px 14px; font-family: Georgia, "Times New Roman", serif; }
+    .speaker { font-weight: bold; }
+    footer { border-top: 1px solid var(--rule); margin-top: 2rem; padding-top: 1rem; color: var(--muted); font-size: .9rem; }
+    nav a { color: var(--accent); text-decoration: none; margin: 0 .25rem; }
+    nav a:hover { text-decoration: underline; color: #138b8f; }
+  </style>
+</head>
+
+
+<main>
+<section id="1-role-definition">
   <h2>1. Role Definition</h2>
+ 
   <dl>
     <dt><strong>Name</strong></dt>
 
@@ -57,10 +103,9 @@
 
 
 
-
-
-<section>
+<section id="2-technical-affordances">
   <h2>2. Technical Affordances</h2>
+
   <ul>
     <li><strong>Spatial retrieval:</strong> Gaze, gesture, voice — e.g., look at a shelf to open it, point to select, speak to refine results.</li>
     <li><strong>Multimodal query parsing:</strong> Natural language, visual context, semantic cues — e.g., ask a question while highlighting an object or scene.</li>
@@ -82,12 +127,9 @@
 
 
 
-
-
-
-<section>
+<section id="3-concept">
   <h2>3. Concept</h2>
-  <h3>Purpose</h3>
+
   <p>AI knowledge guide — trusted, familiar, efficient. Assists users with finding sources and managing information in immersive workspaces.</p>
 
   <h3>Application</h3>
@@ -103,8 +145,14 @@
 </section>
 
 
-<section>
+
+
+
+
+
+  <section id="4-narrative">
   <h2>4. Narrative Commentary</h2>
+
   <blockquote>
     <p>“The Librarian is an AI Role Primitive — a reusable base specification for knowledge-retrieval functions. Each implementation (e.g., ‘HoloLibrarian’, ‘AmbientLibrarian’) may have a unique name, persona, or branding consistent with this base role.”</p>
   </blockquote>
@@ -114,8 +162,11 @@
 
 
 
-<section>
+
+
+  <section id="5-use-case">
   <h2>5. Fictional Use Case — The Librarian</h2>
+ 
   <p>Jules leaned back in the standing couch and adjusted her headset, stuck between panic and caffeine clarity. Soft overlays shimmered — task board, version history, calendar node blinking “INVESTOR CHECK-IN — 18 MIN.”</p>
 
   <p>A polite cough. The Librarian emerged: seven foot two, ginger-furred, tweed-jacketed, perched vertiginously on the shell of a very large, very ancient anxious looking tortoise. At times eccentric, quite regularly petty and judgmental — styled loosely on a certain long-running British fantasy series trope. Irony long gone. Judgment and bananas remained.</p>
@@ -149,7 +200,12 @@
   <p>All that remained was an annotated bibliography and a faint whiff of musty, magical tomes.</p>
 </section>
 
-<section id="invocation-action-verbs">
+
+
+
+<section id="6-verbs">
+  <h2>6. Invocation Action Verbs</h2>
+
   <h2>6. Invocation Action Verbs</h2>
   <p>These verbs define the primary actions a <em>Librarian</em> instance can be asked to perform, keeping the role legible and interoperable across contexts.</p>
   <ul>
@@ -167,8 +223,13 @@
   </ul>
 </section>
 
-<section>
+
+
+
+
+<section id="7-co-invocation">
   <h2>7. Co-Invocation Roles</h2>
+
   <p>The Librarian may be co-invoked alongside other roles in an orchestrated agent mesh or infrastructure layer. Example co-invocation roles can include: Archivist, Scribe, Orchestrator, Curator, Facilitator, Assistant, Advisor, Analyst, Researcher, Annotator, Connector, Sentinel, Steward, Mediator, Guide, Companion, Operator, Observer, Synthesizer, Navigator, Interpreter, Instructor, Strategist.</p>
   <p>These roles combine to extend the Librarian’s capabilities within complex XR, spatial, and ambient AI infrastructures and ecosystems.</p>
   <p><strong>Example flows:</strong> The Librarian pairs with the Synthesizer to distill insights from large knowledge sets, or with the Interpreter to translate source material in-context. In enterprise contexts, the Librarian may co-invoke with a Compliance Officer or Auditor for regulated knowledge tasks.</p>
@@ -229,8 +290,17 @@
   </table>
 </section>
 
-<section>
+
+<section id="8-summary">
+  <h2>8. Structured Summary Table</h2>
+  <!-- keep your table content -->
+</section>
+
+
+
+  <section id="9-ethics">
   <h2>9. Ethics and Governance</h2>
+
   <p>By default the Librarian Role Primitive follows baseline ethical guidelines for trusted knowledge work. This includes respecting user privacy, honoring intellectual property, providing transparent sourcing, and avoiding manipulation or bias when retrieving and curating information.</p>
   <p>Interpersonally, the Librarian is meant to maintain a stance of broad goodwill with the intent of serving the best interests of the user in personal or collaborative contexts, while enforcing the maintenance of clear functional boundaries; the effectuating of such boundary enforcement being the fundamental raison d’être
  of a defined role-primitive. Nonetheless, users may, over time and in context, adjust the Librarian’s tone, style, and even scope, within system affordances to suit individual or contextual preferences.</p>
@@ -243,31 +313,26 @@
 
 <hr>
 
+</main>
 
 
 
-<nav>
-  <a href="/">Home</a> ·
-  <a href="/about">About</a> ·
-  <a href="/librarian">Librarian Spec</a> ·
-  <a href="/companion">Companion Spec</a> ·
-  <a href="/role-primitives/butler">Butler Spec</a> ·
-  <a href="/role-primitives/secretary">Secretary Spec</a> ·
-  <a href="/role-primitives/confidante">Confidante Spec</a>
-</nav>
+<footer>
+  <nav>
+    <a href="/">Home</a> ·
+    <a href="/about">About</a>
+  </nav>
+  <p>
+    Provenance: First published at <a href="https://symbollayer.com">Symbol Layer</a> ·
+    Canonical: <code>https://symbollayer.com/role-primitives/librarian.html</code> ·
+    Public domain (CC0 1.0). Please retain the canonical name for discoverability.
+  </p>
+</footer>
 
 
 
+  
 
-
-
-
-<p style="font-size:0.9em;color:gray;margin-top:0.6em">
-  <strong>Provenance:</strong><br>
-  First published: 2025-07-03&nbsp;&nbsp;First archived: 2025-08-13&nbsp;&nbsp;Rendering fixed: 2025-10-14<br>
-  Canonical source: <a href="https://github.com/symbollayer/symbollayer">GitHub repository</a><br>
-  <span id="last-updated-line">Last updated: <time id="last-updated" datetime=""></time></span>
-</p>
 
 <script>
   (function () {
