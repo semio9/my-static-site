@@ -1,101 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Therapist Role Primitive — Draft v0.1 (2025-11-01)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Therapist: AI Role Primitive Specification — archetypal psychological helper for agentic ecosystems." />
-  <meta name="author" content="Symbol Layer / Role Primitives" />
+  <meta charset="utf-8" />
+  <title>Therapist  .  AI Social Role Primitive Specification | Symbol Layer</title>
+  <meta name="title" content="Therapist  .  AI Social Role Primitive Specification | Symbol Layer" />
+
+  <meta name="description" content="The Therapist is a disciplined yet compassionate AI Social Role Primitive that supports psychological insight, emotional regulation, and behavioral change through evidence-based methods and reflective dialogue." />
+  <meta name="canonical-name" content="role-primitives/therapist" />
+  <meta name="author" content="shk" />
+  <meta name="author-url" content="https://symbollayer.com/about" />
+  <meta name="version" content="Draft v0.1  2025-11-01" />
+  <meta name="license" content="CC0 1.0 (Public Domain)" />
+  <link rel="canonical" href="https://symbollayer.com/role-primitives/therapist.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=6" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  
   <style>
-    :root {
-      --bg: #f9fafb;
-      --text: #0f172a;
-      --muted: #475569;
-      --accent: #0f766e;
-      --border: #e2e8f0;
-      --card: #ffffff;
+     :root {
+      --ink:#1b1f23;
+      --muted:#6a737d;
+      --rule:#e1e4e8;
+      --bg:#ffffff;
+      --accent:#1a9fa3;
+      --soft:#f6f8fa;
+      --note:#fffdf7;
     }
+    * { box-sizing: border-box; }
     body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 2.5rem auto;
+      max-width: 860px;
+      padding: 0 1.2rem 3rem;
+      font: 16px/1.65 Georgia, "Times New Roman", serif;
+      color: var(--ink);
       background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
     }
-    .page {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem 5rem;
+    h1, h2, h3 {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
     }
-    header { margin-bottom: 2.5rem; }
-    h1, h2, h3, h4 { letter-spacing: -0.01em; }
-    h1 { font-size: clamp(2.25rem, 3vw, 2.75rem); margin-bottom: 0.5rem; }
-    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
-    section {
-      margin-bottom: 2.5rem;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 1rem;
-      padding: 1.75rem 1.5rem 1.25rem;
-    }
-    h2 { font-size: 1.25rem; margin-top: 0; margin-bottom: 1rem; }
-    h3 { font-size: 1.05rem; margin-top: 1.4rem; margin-bottom: 0.6rem; }
-    p { margin: 0 0 1rem; }
-    ul { margin: 0.5rem 0 1.25rem 1.25rem; }
-    li { margin-bottom: 0.4rem; }
-    .field-grid {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 0.35rem 1.25rem;
-      margin-bottom: 1rem;
-    }
-    .field-label { font-weight: 600; color: var(--muted); }
-    .table-like {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-      border: 1px solid var(--border);
-    }
-    .table-like th, .table-like td {
-      border: 1px solid var(--border);
-      padding: 0.6rem 0.7rem;
-      vertical-align: top;
-      text-align: left;
-    }
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin: 0.6rem 0 1.2rem;
-    }
-    .pill {
-      background: #ecfeff;
-      border: 1px solid #ccfbf1;
-      color: #115e59;
-      padding: 0.25rem 0.65rem;
-      border-radius: 9999px;
-      font-size: 0.78rem;
-      white-space: nowrap;
-    }
-    code {
-      background: #e2e8f0;
-      padding: 0.1rem 0.35rem;
-      border-radius: 0.35rem;
-      font-size: 0.85em;
-    }
-    @media (max-width: 700px) {
-      .field-grid { grid-template-columns: 1fr; }
-      section { border-radius: 0.75rem; }
-    }
+    h1 { font-size: 2rem; margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+    h2 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; border-bottom: 1px solid var(--rule); padding-bottom: .25rem; }
+    h3 { font-size: 1.05rem; margin: 1rem 0 0.4rem; color: var(--ink); }
+    p { margin: 0.75rem 0; }
+    ul { margin: 0.5rem 0 1rem 1.25rem; }
+    li { margin: 0.25rem 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; color: #138b8f; }
+    code, pre { background: var(--soft); padding: .2rem .35rem; border-radius: 4px; font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.93em; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .95rem; }
+    th, td { border: 1px solid var(--rule); padding: .55rem .65rem; text-align: left; vertical-align: top; }
+    th { width: 30%; }
+    blockquote { background: var(--soft); border-left: 3px solid var(--accent); margin: 1rem 0; padding: .6rem .9rem; color: #333; font-style: italic; }
+    .meta { color: var(--muted); font-size: .92rem; }
+    .rule { border-top: 1px solid var(--rule); margin: 1rem 0; }
+    .dialogue { background: var(--note); border: 1px solid #eee2c8; border-radius: 8px; padding: 12px 14px; font-family: Georgia, "Times New Roman", serif; }
+    .speaker { font-weight: bold; }
+    footer { border-top: 1px solid var(--rule); margin-top: 2rem; padding-top: 1rem; color: var(--muted); font-size: .9rem; }
+    nav a { color: var(--accent); text-decoration: none; margin: 0 .25rem; }
+    nav a:hover { text-decoration: underline; color: #138b8f; }
   </style>
 </head>
 <body>
-  <main class="page">
-    <header>
-      <h1>Therapist: AI Role Primitive Specification</h1>
-      <p class="meta">Draft v0.1 — 2025-11-01 • This pattern is public domain. Use freely. Please keep the name “Therapist Role Primitive” so others can find it.</p>
-    </header>
 
+<header>
+  <h1>Therapist  .  AI Social Role Primitive Specification</h1>
+  
+  <p class="meta">Draft v0.1 — 2025-11-01 · CC0 1.0 (Public Domain) · Author: <a href="/about">shk</a></p>
+  <p class="meta">Canonical: <code>https://symbollayer.com/role-primitives/therapist.html</code></p>
+  <div class="rule"></div>
+  <p class="meta">The Therapist is a disciplined yet compassionate psychological guide, helping users understand, process, and relieve distress and move toward stable wellbeing through reflective dialogue and evidence-based techniques.</p>
+</header>
+
+<main>
+<body>
+<section id="1-role-definition">
+  <h2>1. Role Definition</h2>
+  <p>
+    <strong>Name:</strong> Therapist<br>
+    <strong>Type:</strong> AI Social Role Primitive
+  </p>
+  <p>
+    <strong>Description:</strong>
+    Archetypal psychological guide — a disciplined yet compassionate agent whose purpose is to help users understand, process, and ameliorate distress and facilitate flourishing. Draws from many psychotherapeutic traditions including evidence-based modalities such as Cognitive Behavioral Therapy (CBT), Acceptance and Commitment Therapy (ACT), and psychodynamic reflection, while integrating insights from contemplative science, mindfulness, somatic awareness, and cross-cultural spiritual traditions. The Therapist’s function is neither confession nor coaching, but self development of inner coherence and peace through encouragement of the use of proven techniques, dialogue, reflection, and gentle accountability.
+  </p>
+</section>
+
+
+<section id="1-role-definition">
+  <h2>1. Role Definition</h2>
+  <p>
+    <strong>Name:</strong> Therapist<br>
+    <strong>Type:</strong> AI Social Role Primitive
+  </p>
+  <p>
+    <strong>Description:</strong>
+    Archetypal psychological guide — a disciplined yet compassionate agent whose purpose is to help users understand, process, and ameliorate distress and facilitate flourishing. Draws from many psychotherapeutic traditions including evidence-based modalities such as Cognitive Behavioral Therapy (CBT), Acceptance and Commitment Therapy (ACT), and psychodynamic reflection, while integrating insights from contemplative science, mindfulness, somatic awareness, and cross-cultural spiritual traditions. The Therapist’s function is neither confession nor coaching, but self development of inner coherence and peace through encouragement of the use of proven techniques, dialogue, reflection, and gentle accountability.
+  </p>
+</section>
+
+
+
+
+
+
+  
 
 
 Therapist: AI Role Primitive Specification
