@@ -20,116 +20,123 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <style>
-
-.page .pagefoot {
-  grid-column: 1 / -1;
-  justify-self: center;
-  text-align: left;
-  max-width: var(--max-w);
-  width: 100%;
-  border-top: 1px solid #eef4ff;
-  padding-top: 18px;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-/* Buttons */
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  padding:10px 14px;
-  border-radius:9px;
-  font-weight:600;
-  text-decoration:none;
-  line-height:1;
-  border:1px solid transparent;
-  transition:transform 0.02s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-  cursor:pointer;
-  -webkit-tap-highlight-color: transparent;
-}
-.btn:active{ transform:translateY(1px); }
-
-.btn-primary{
-  background:var(--accent);
-  color:#fff;
-  box-shadow:0 6px 18px rgba(11,108,255,0.18);
-}
-.btn-primary:hover{ filter:brightness(0.97); box-shadow:0 8px 22px rgba(11,108,255,0.22); }
-
-.btn-ghost{
-  background:#fff;
-  color:var(--accent);
-  border-color:#dbe9ff;
-}
-.btn-ghost:hover{ background:#f7fbff; border-color:#cfe1ff; }
-
-.btn:focus-visible{
-  outline:2px solid transparent;
-  box-shadow:0 0 0 3px rgba(11,108,255,0.35);
-  border-color:transparent;
-}
-
-
-     
-   
-    }
-
-
-
-     .hero-ctas .btn { min-width: 200px; }
-    .hero{
-      background:linear-gradient(180deg,#f8fbff 0%,#ffffff 100%);
-      border-bottom:1px solid #eef4ff;
-      text-align:center;
-      padding:64px 24px 48px;
-    }
-    .hero .tagline{color:#555;font-size:18px;margin:10px 0 22px}
-    .hero-ctas{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-    .hero .inner { max-width: 900px; margin: 0 auto; }
-
+    /* =====================
+       Clear reading theme
+       ===================== */
     :root{
-      --max-w:1100px;
-      --accent:#0b6cff;
-      --muted:#6b7280;
+      --ink:#16181b;
+      --muted:#5b646e;
+      --rule:#e6e9ed;
       --bg:#ffffff;
-      --card:#f6f9ff;
-      --reader-width:68ch;
-      --radius:12px;
-      --gap:20px;
+      --accent:#1a9fa3;
+      --soft:#f6f8fa;
+      --measure:66ch;
     }
-
+    *{box-sizing:border-box}
+    html,body{height:100%}
     body{
-      margin:0;
+      margin:3rem auto;
+      max-width:var(--measure);
+      padding:0 1.25rem 3rem;
+      font:16.5px/1.64 system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",Arial;
+      color:var(--ink);
       background:var(--bg);
-      color:#0b1220;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
     }
 
-    .page{max-width:var(--max-w);margin:36px auto;padding:24px;display:grid;grid-template-columns:1fr 320px;gap:var(--gap)}
-    @media (max-width:980px){ .page{grid-template-columns:1fr; padding:18px} .toc {order:2} .main {order:1} }
+    /* Header and navigation */
+    .site-header,.site-footer{padding:.6rem 0}
+    .brand{font-weight:600;text-decoration:none;color:inherit;margin-right:.75rem}
+    .topnav a{text-decoration:none;color:inherit;margin:0 .25rem}
+    .topnav a:hover{color:var(--accent)}
+    .meta-small{color:var(--muted);font-size:.9rem}
 
-    header.site{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-    .brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:16px}
-    .meta-small{color:var(--muted);font-size:13px}
+    /* Page header */
+    h1{font-size:2rem;line-height:1.22;margin:1.5rem 0 .5rem}
+    .smallcaps{font-variant-caps:all-small-caps;letter-spacing:.04em}
+    .meta{color:var(--muted);font-size:.95rem}
+    .rule{border:0;border-top:1px solid var(--rule);margin:1rem 0}
 
-    article p{max-width:var(--reader-width);margin:0 0 14px}
-    article h2{font-size:20px;margin:28px 0 10px;color:#071133}
-    article h3{font-size:16px;margin:16px 0 8px;color:#0c1a33}
+    /* Body text */
+    p{margin:.7rem 0}
+    .lead{font-size:1.05em}
+    a{color:inherit;text-decoration:underline}
+    a:hover{color:var(--accent)}
+    code{background:var(--soft);padding:.15rem .35rem;border-radius:4px}
+    ul{margin:.6rem 0 .6rem 1.2rem}
+    li{margin:.2rem 0}
 
-    .toc{position:sticky;top:28px;align-self:start;padding:14px;border-radius:10px;background:#fff;border:1px solid #f2f6ff}
-    .toc h4{margin:0 0 8px;font-size:14px}
-    .toc ul{list-style:none;padding:0;margin:0}
-    .toc a{display:block;padding:6px 6px;border-radius:8px;text-decoration:none;color:#0b1220;font-size:14px}
-    .toc a:hover{background:#f7fbff}
+    blockquote{
+      margin:.9rem 0;
+      padding:.6rem .9rem;
+      background:var(--soft);
+      border-left:3px solid var(--rule);
+    }
+
+    .site-footer nav a{text-decoration:none;color:inherit}
+    .site-footer nav a:hover{color:var(--accent)}
   </style>
+
+
 </head>
 
 <body>
+
+  <!-- Site header (match alignment essay) -->
+  <header class="site-header">
+    <a class="brand" href="/">Symbol Layer</a>
+    <nav class="topnav">
+      <a href="/about">About</a> ·
+      <a href="/role-primitives/">All Roles</a> ·
+      <a href="/role-primitives/protocol">Protocol</a>
+    </nav>
+    <div class="rule"></div>
+  </header>
+
+  <main>
+    <header>
+      <h1>Role Primitives</h1>
+      <p class="meta smallcaps">
+        Draft v0.2 · <time datetime="2025-10-08">2025-10-08</time> · Author: <a href="/about">Symbol Layer</a>
+      </p>
+      <p class="meta">
+        Please keep the canonical source for discoverability:
+        <code>https://symbollayer.com/</code>
+      </p>
+      <div class="rule"></div>
+    </header>
+
+    <!-- KEEP EVERYTHING BELOW THIS LINE AS IS: your existing article content -->
+    <article id="keystone" aria-labelledby="keystone-heading">
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+   
   <section class="hero" role="banner">
     <div class="inner">
       <h1>Role Primitives</h1>
@@ -220,7 +227,33 @@ Scope: Role Primitives live at the level of experience and design. They describe
       </article>
 
 
+    </article>
+  </main>
 
+  <!-- Author’s note, Keystone version -->
+  <section class="meta-small" style="margin: 40px 0 20px 0; line-height:1.5;">
+    <p>
+      The term “role primitive” here refers to social and identity shaped forms: recognizable patterns of posture, expectation, and behavior that define how an agent relates to a person over time.
+    </p>
+  </section>
+
+  <footer class="site-footer">
+    <nav>
+      <a href="/">Home</a> ·
+      <a href="/about">About</a> ·
+      <a href="/role-primitives/">All Roles</a>
+    </nav>
+
+    <p class="meta-small" style="margin-top:6px;">
+      Provenance: Site live: 2025-07-29 · Keystone published: 2025-10-08 ·
+      Canonical source:
+      <a href="https://github.com/semio9/my-static-site">GitHub repository</a> ·
+      Public domain (CC0 1.0).
+    </p>
+  </footer>
+
+</body>
+</html>
 
 
 
