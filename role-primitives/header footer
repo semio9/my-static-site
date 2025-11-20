@@ -1,0 +1,26 @@
+
+<header class="site-header">
+  <a class="brand" href="/">Symbol Layer</a>
+  <div class="rule"></div>
+</header>
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+  <nav>
+    <a href="/">Home</a> ·
+    <a href="/about">About</a>
+  </nav>
+
+  <p class="meta-small" style="margin-top:0.6em">
+    <strong>Provenance:</strong><br>
+    Canonical source: 
+    <a href="https://github.com/semio9/my-static-site">GitHub repository</a><br>
+    Public domain (CC0 1.0).
+  </p>
+</footer>
