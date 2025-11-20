@@ -20,6 +20,68 @@
    <link rel="canonical" href="https://symbollayer.com/">
   <link rel="stylesheet" href="/css/style.css">
 
+
+  <style>
+    :root{
+      --ink:#16181b;
+      --muted:#5b646e;
+      --rule:#e6e9ed;
+      --bg:#ffffff;
+      --accent:#1a9fa3;
+      --soft:#f6f8fa;
+      --measure:66ch;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:3rem auto;
+      max-width:var(--measure);
+      padding:0 1.25rem 3rem;
+      font:16.5px/1.64 system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",Arial;
+      color:var(--ink);
+      background:var(--bg);
+    }
+
+    .site-header,.site-footer{padding:.6rem 0}
+    .brand{font-weight:600;text-decoration:none;color:inherit;margin-right:.75rem}
+    .topnav a{text-decoration:none;color:inherit;margin:0 .25rem}
+    .topnav a:hover{color:var(--accent)}
+    .meta-small{color:var(--muted);font-size:.9rem}
+
+    h1{font-size:2rem;line-height:1.22;margin:1.5rem 0 .5rem}
+    .smallcaps{font-variant-caps:all-small-caps;letter-spacing:.04em}
+    .meta{color:var(--muted);font-size:.95rem}
+    .rule{border:0;border-top:1px solid var(--rule);margin:1rem 0}
+
+    p{margin:.7rem 0}
+    .lead{font-size:1.05em}
+    a{color:inherit;text-decoration:underline}
+    a:hover{color:var(--accent)}
+    code{background:var(--soft);padding:.15rem .35rem;border-radius:4px}
+
+    ul{margin:.6rem 0 .6rem 1.2rem}
+    li{margin:.2rem 0}
+
+    blockquote{
+      margin:.9rem 0;
+      padding:.6rem .9rem;
+      background:var(--soft);
+      border-left:3px solid var(--rule);
+    }
+
+    .site-footer nav a{text-decoration:none;color:inherit}
+    .site-footer nav a:hover{color:var(--accent)}
+  </style>
+
+
+
+
+
+
+
+
+  
+
   <!-- Open Graph -->
   <meta property="og:title" content="Role Primitives — Symbol Layer">
   <meta property="og:description" content="Archetypal specs of classic social roles for human–AI interaction.">
@@ -45,12 +107,36 @@
   
 
 <body>
+
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="/">Symbol Layer</a>
+    <nav class="topnav">
+      <a href="/about">About</a> ·
+      <a href="/role-primitives/">All Roles</a> ·
+      <a href="/role-primitives/protocol">Protocol</a>
+    </nav>
+    <div class="rule"></div>
+  </header>
+
   <main>
-<h1
-id="role-primitives-why-ai-assistants-must-transmogrify-into-agents-performing-classic-social-roles">Role
-Primitives: Why AI Assistants Must Transmogrify into Agents Performing
-Classic Social Roles</h1>
- 
+    <header>
+      <h1 id="role-primitives-why-ai-assistants-must-transmogrify-into-agents-performing-classic-social-roles">
+        Role Primitives: Why AI Assistants Must Transmogrify into Agents Performing Classic Social Roles
+      </h1>
+      <p class="meta smallcaps">
+        Draft v0.1 · <time datetime="2025-09-27">2025-09-27</time> · Author: <a href="/about">shk</a>
+      </p>
+      <p class="meta">
+        Please keep the canonical source for discoverability:
+        <code>https://symbollayer.com/</code>
+      </p>
+      <div class="rule"></div>
+    </header>
+
+    <article>
+     
   
   <h2 id="the-problem">The Problem</h2>
 <p>User interactions with AI assistants are unnecessarily frustrating
@@ -266,62 +352,61 @@ our AIs to act as members of human society, and begin to deal with them
 as such — and just perhaps in that there is a greater good that extends
 beyond the meeting of our own personal needs.</p>
 
- </main>
-  
-  <hr>
 
+  </main>
 
+  </main>
 
-<nav>
-  <a href="/">Home</a> ·
-  <a href="/about">About</a> ·
-  <a href="/librarian">Librarian Spec</a> ·
-  <a href="/companion">Companion Spec</a> ·
-  <a href="/role-primitives/butler">Butler Spec</a> ·
-  <a href="/role-primitives/secretary">Secretary Spec</a> ·
-  <a href="/role-primitives/confidante">Confidante Spec</a>
-</nav>
+  <footer class="site-footer">
+    <nav>
+      <a href="/">Home</a> ·
+      <a href="/about">About</a> ·
+      <a href="/librarian">Librarian Spec</a> ·
+      <a href="/companion">Companion Spec</a> ·
+      <a href="/role-primitives/butler">Butler Spec</a> ·
+      <a href="/role-primitives/secretary">Secretary Spec</a> ·
+      <a href="/role-primitives/confidante">Confidante Spec</a>
+    </nav>
 
+    <p class="meta-small" style="margin-top:0.6em">
+      <strong>Provenance:</strong><br>
+      First published: 2025-09-27&nbsp;&nbsp;Rendering fixed: 2025-09-27<br>
+      Canonical source: <a href="https://github.com/semio9/my-static-site">GitHub repository</a><br>
+      <span id="last-updated-line">Last updated: <time id="last-updated" datetime=""></time></span>
+    </p>
+  </footer>
 
-<p style="font-size:0.9em;color:gray;margin-top:0.6em">
-  <strong>Provenance:</strong><br>
-  First published: 2025-09-27&nbsp;&nbsp;Rendering fixed: 2025-09-27<br>
-  Canonical source: <a href="https://github.com/semio9/my-static-site">GitHub repository</a><br>
-  <span id="last-updated-line">Last updated: <time id="last-updated" datetime=""></time></span>
-</p>
+  <script>
+    (function () {
+      var lm = new Date(document.lastModified);
+      if (!isNaN(lm.getTime())) {
+        var y = lm.getFullYear();
+        var m = String(lm.getMonth() + 1).padStart(2, '0');
+        var d = String(lm.getDate()).padStart(2, '0');
+        var iso = y + '-' + m + '-' + d;
 
-<script>
-  (function () {
-    // Automatically display the page's last-modified date in YYYY-MM-DD format
-    var lm = new Date(document.lastModified);
-    if (!isNaN(lm.getTime())) {
-      var y = lm.getFullYear();
-      var m = String(lm.getMonth() + 1).padStart(2, '0');
-      var d = String(lm.getDate()).padStart(2, '0');
-      var iso = y + '-' + m + '-' + d;
-
-      var t = document.getElementById('last-updated');
-      if (t) {
-        t.textContent = iso;
-        t.setAttribute('datetime', iso);
+        var t = document.getElementById('last-updated');
+        if (t) {
+          t.textContent = iso;
+          t.setAttribute('datetime', iso);
+        }
+      } else {
+        var line = document.getElementById('last-updated-line');
+        if (line) line.style.display = 'none';
       }
-    } else {
-      var line = document.getElementById('last-updated-line');
-      if (line) line.style.display = 'none';
-    }
-  })();
-</script>
-
-
-
-
-
-
-
-
-
-
-  
+    })();
+  </script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
