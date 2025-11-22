@@ -1,3 +1,164 @@
+essay header
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg">
+
+  <meta charset="utf-8" />
+  <title>Essay Title  |  Symbol Layer</title>
+  <meta name="title" content="Essay Title  |  Symbol Layer" />
+  <meta name="description" content="Short description of the essay." />
+  <meta name="author" content="shk" />
+  <meta name="author-url" content="https://symbollayer.com/about" />
+  <meta name="version" content="Draft v0.x  YYYY-MM-DD" />
+  <meta name="license" content="CC0 1.0 (Public Domain)" />
+  <link rel="canonical" href="https://symbollayer.com/essays/essay-slug.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header>
+  <h1>Essay Title</h1>
+  <p class="meta">Draft v0.x — YYYY-MM-DD · CC0 1.0 (Public Domain) · Author: <a href="/about">shk</a></p>
+  <p class="meta">Canonical: <code>https://symbollayer.com/essays/essay-slug.html</code></p>
+  <div class="rule"></div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+essay footer
+
+<footer>
+  <nav>
+    <a href="/">Home</a> ·
+    <a href="/essays">Essays</a> ·
+    <a href="/about">About</a>
+  </nav>
+  <p class="meta">Symbol Layer · Public Domain · Last updated YYYY-MM-DD</p>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+spec header
+
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg">
+
+  <meta charset="utf-8" />
+  <title>RoleName  .  AI Social Role Primitive Specification | Symbol Layer</title>
+  <meta name="title" content="RoleName  .  AI Social Role Primitive Specification | Symbol Layer" />
+  <meta name="description" content="One-sentence role description." />
+  <meta name="canonical-name" content="role-primitives/rolename" />
+  <meta name="author" content="shk" />
+  <meta name="author-url" content="https://symbollayer.com/about" />
+  <meta name="version" content="Draft v0.x — YYYY-MM-DD" />
+  <meta name="license" content="CC0 1.0 (Public Domain)" />
+  <link rel="canonical" href="https://symbollayer.com/role-primitives/rolename.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header>
+  <h1>RoleName — AI Social Role Primitive Specification</h1>
+  <p class="meta">Draft v0.x — YYYY-MM-DD · CC0 1.0 (Public Domain) · Author: <a href="/about">shk</a></p>
+  <p class="meta">Canonical: <code>https://symbollayer.com/role-primitives/rolename.html</code></p>
+  <div class="rule"></div>
+</header>
+
+
+
+
+
+
+
+
+
+spec footer
+
+
+
+
+
+<footer>
+  <nav>
+    <a href="/">Home</a> ·
+    <a href="/role-primitives">Role Primitives</a> ·
+    <a href="/about">About</a>
+  </nav>
+  <p class="meta">Symbol Layer · Public Domain · Last updated YYYY-MM-DD</p>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+not sure which header and footer these are: i think for the essays, but not sure
 
 <header class="site-header">
   <a class="brand" href="/">Symbol Layer</a>
