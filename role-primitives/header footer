@@ -1,4 +1,57 @@
-essay header
+
+nov24th(newest updates will be at the top of the page)
+
+essay header text:
+
+<header class="site-header">
+  <a class="brand" href="/">Symbol Layer</a>
+
+  <nav class="topnav">
+    <a href="/">Home</a> ·
+    <a href="/about">About</a> ·
+    <a href="/#essays">Essays</a>
+  </nav>
+
+  <div class="rule"></div>
+</header>
+
+
+
+essay footer text:
+
+<footer class="site-footer">
+
+  <nav>
+    <a href="/">Home</a> ·
+    <a href="/about">About</a>
+  </nav>
+
+  <p class="meta-small" style="margin-top:6px;">
+    Provenance: Authored by <a href="/about">shk</a> · Published at 
+    <a href="https://symbollayer.com">Symbol Layer</a> · Canonical: 
+    <code>https://symbollayer.com/ROLE-SPECIFIC-CANONICAL-PATH.html</code> · 
+    Public domain (CC0 1.0). Please retain the canonical name for discoverability.
+  </p>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+old essay header(pre nov 24th)
 
 
 <!doctype html>
