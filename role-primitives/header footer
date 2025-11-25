@@ -1,3 +1,46 @@
+nov 25th adding the header and footers for specs - no change to header and footer for essays on nov 24
+
+
+<header class="site-header">
+  <a class="brand" href="/">Symbol Layer</a>
+
+  <nav class="topnav">
+    <a href="/">Home</a> ·
+    <a href="/about">About</a> ·
+    <a href="/#role-primitives">Role Primitives</a>
+  </nav>
+
+  <div class="rule"></div>
+</header>
+
+
+
+
+
+<footer class="site-footer">
+
+  <nav>
+    <a href="/">Home</a> ·
+    <a href="/about">About</a>
+  </nav>
+
+  <p class="meta-small" style="margin-top:6px;">
+    Provenance: Authored by <a href="/about">shk</a> · Published at 
+    <a href="https://symbollayer.com">Symbol Layer</a> · Canonical:
+    <code>https://symbollayer.com/ROLE-SPECIFIC-CANONICAL-PATH.html</code> ·
+    Public domain (CC0 1.0). Please retain the canonical name for discoverability.
+  </p>
+</footer>
+
+
+
+
+
+
+
+
+
+
 
 nov24th(newest updates will be at the top of the page)
 
