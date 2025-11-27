@@ -15,6 +15,81 @@
   <meta name="canonical-name" content="about">
   <meta name="license" content="CC0 1.0 (Public Domain)">
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --ink:#1b1f23;
+      --muted:#6a737d;
+      --rule:#e1e4e8;
+      --bg:#ffffff;
+      --accent:#1a9fa3;
+      --soft:#f6f8fa;
+      --note:#fffdf7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 2.5rem auto;
+      max-width: 860px;
+      padding: 0 1.2rem 3rem;
+      font: 16px/1.65 Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    h1, h2, h3 {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+    }
+    h1 { font-size: 2rem; margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+    h2 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; border-bottom: 1px solid var(--rule); padding-bottom: .25rem; }
+    h3 { font-size: 1.05rem; margin: 1rem 0 0.4rem; color: var(--ink); }
+    p { margin: 0.75rem 0; }
+    ul { margin: 0.5rem 0 1rem 1.25rem; }
+    li { margin: 0.25rem 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; color: #138b8f; }
+    code, pre {
+      background: var(--soft);
+      padding: .2rem .35rem;
+      border-radius: 4px;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.93em;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .95rem; }
+    th, td {
+      border: 1px solid var(--rule);
+      padding: .55rem .65rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { width: 30%; }
+    blockquote {
+      background: var(--soft);
+      border-left: 3px solid var(--accent);
+      margin: 1rem 0;
+      padding: .6rem .9rem;
+      color: #333;
+      font-style: italic;
+    }
+    .meta { color: var(--muted); font-size: .92rem; }
+    .rule { border-top: 1px solid var(--rule); margin: 1rem 0; }
+    .dialogue {
+      background: var(--note);
+      border: 1px solid #eee2c8;
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+    .speaker { font-weight: bold; }
+    footer {
+      border-top: 1px solid var(--rule);
+      margin-top: 2rem;
+      padding-top: 1rem;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    nav a { color: var(--accent); text-decoration: none; margin: 0 .25rem; }
+    nav a:hover { text-decoration: underline; color: #138b8f; }
+  </style>
 </head>
 
 <body>
@@ -25,7 +100,6 @@
   <nav class="topnav">
     <a href="/">Home</a> ·
     <a href="/about">About</a> ·
-    <a href="/#role-primitives">Role Primitives</a>
   </nav>
 
   <div class="rule"></div>
@@ -33,19 +107,18 @@
 
 <main>
 
-<h1>About — Symbol Layer</h1>
-
+  <h1>About — Symbol Layer</h1>
 
   <p>Authored by <strong>shk</strong>. Contact:
     <a href="mailto:contact@symbollayer.com">contact@symbollayer.com</a> (currently inactive).
   </p>
 
-<p style="font-size:0.9em;color:gray">
-  <strong>Provenance</strong><br>
-  First published on <a href="https://symbollayer.com">SymbolLayer.com</a><br>
-  Last updated: —<br>
-  Canonical source: <a href="https://github.com/symbollayer/symbollayer">GitHub repository</a>
-</p>
+  <p style="font-size:0.9em;color:gray">
+    <strong>Provenance</strong><br>
+    First published on <a href="https://symbollayer.com">SymbolLayer.com</a><br>
+    Last updated: —<br>
+    Canonical source: <a href="https://github.com/symbollayer/symbollayer">GitHub repository</a>
+  </p>
 
 </main>
 
@@ -56,12 +129,12 @@
     <a href="/about">About</a>
   </nav>
 
-<p class="meta-small" style="margin-top:6px;">
-  Authored by <a href="/about">shk</a>. Published at 
-  <a href="https://symbollayer.com">Symbol Layer</a>. Canonical:
-  <code>https://symbollayer.com/about</code>.  
-  Public domain (CC0 1.0). Please retain the canonical path for discoverability.
-</p>
+  <p class="meta-small" style="margin-top:6px;">
+    Authored by <a href="/about">shk</a>. Published at 
+    <a href="https://symbollayer.com">Symbol Layer</a>. Canonical:
+    <code>https://symbollayer.com/about</code>.  
+    Public domain (CC0 1.0). Please retain the canonical path for discoverability.
+  </p>
 
 </footer>
 
