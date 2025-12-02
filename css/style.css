@@ -10,11 +10,15 @@ nav a {
   text-decoration: none;
   color: blue;
 }
+
+
+
 h1 {
-  color: aquamarine;
-  font-size: 2.5rem;
-  font-weight: bold;
+  color: var(--accent);
+  font-size: 2rem;
+  line-height: 1.22;
   margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 
@@ -41,10 +45,6 @@ body {
 }
 
 /* === Headings === */
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
 
 h2 {
   font-size: 1.5rem;
@@ -98,4 +98,5 @@ th {
 
 tr:nth-child(even) {
   background: #fafafa;
+}
 }
