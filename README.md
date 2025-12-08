@@ -1,38 +1,101 @@
- my-static-site
+# Symbol Layer
 
-
- Librarian Role Primitive Specification
-
-**Draft v0.2 — 2025-07-03**
-
-This repository contains the living, public-domain specification for the **Librarian Role Primitive** — an archetypal AI knowledge-retrieval agent.
-
-**Purpose**
-- Provide an intuitive, reusable base role for knowledge management agents in XR, spatial, metaverse, and ambient computing contexts.
-- Serve as a cultural and technical anchor for developers, designers, and researchers exploring agentic infrastructures.
-
-**What’s here**
-- `index.html`: The full spec, narrative, and technical affordances.
-- `css/style.css`: Simple, modern styling for clear reading.
-- Version controlled. Draft versions may evolve.
-
-**Usage**
-- Use freely. Please keep the name “Librarian Role Primitive” or link to this spec so others can find it.
-- Fork, adapt, remix. Cite the version if relevant.
-
-**License**
-This work is dedicated to the public domain under CC0 1.0 Universal.
-
-
+**Role Primitives and the Architecture of AI Social Roles**  
+**CC0 1.0 · First published July 2025**
 
 ---
-**Provenance**
 
-First published at [SymbolLayer.com](https://symbollayer.com) (Sept 25, 2025).  
-Archived via [Wayback Machine](https://web.archive.org/web/*/https://symbollayer.com).  
----
+## Overview
+
+Symbol Layer is an open framework for defining archetypal AI social roles.  
+It contains specifications, essays and supporting site files that translate classic human roles such as Librarian, Butler, Archivist, Companion, Confidant, Secretary and Therapist into reusable patterns for AI agents.
+
+The project treats social roles as a kind of symbolic operating system for agents. Each role primitive is both a conceptual lens and a practical design surface for behavior, interaction and alignment.
+
 ---
 
-Maintained by [Symbol Layer](https://www.symbollayer.com)  
-Latest draft: v0.2 — 2025-07-03
+## Repository contents
+
+This repository is the source of the public site at **https://symbollayer.com**. Its main parts are:
+
+- `index.html`  
+  Landing page for Role Primitives on the live site.
+
+- `about.html`, `contact.html`, `companion.html`, `librarian.html` (root level)  
+  Public facing pages for the site, including early standalone role pages.
+
+- `role-primitives/`  
+  Core specs and essays for the Role Primitive framework:
+  - `a-stab-at-alignment.html`  
+  - `relief-through-roles.html`  
+  - `protocol.html`  
+  - `protocol-manifesto.html`  
+  - `librarian.html`, `butler.html`, `companion.html`, `confidant.html`, `secretary.html`, `archivist.html`, `advisor.html`, `mentor.html`, `guard.html`, `therapist.html`  
+  - `header footer` and `index.html` (internal navigation and structure helpers)
+
+- `includes/`  
+  - `header.html`, `footer.html`  
+  - `header-fragment.html`, `footer-fragment.html`  
+  Shared HTML includes used across pages for consistent structure and provenance.
+
+- `css/`  
+  - `style.css`  
+  Global styles for the site.
+
+- `js/`  
+  - `includes.js`  
+  Simple JavaScript to inject header and footer includes.
+
+- `.well-known/`  
+  - `author.txt`  
+  Public author and metadata file for discovery and attribution.
+
+- Root housekeeping  
+  - `favicon.svg`  
+  - `robots.txt`, `sitemap.xml`  
+  - `license` (CC0 1.0)  
+  - `template` (HTML template used for new pages)  
+  - `.gitignore`, `.DS_Store` etc.
+
+The live site is built directly from these files.
+
+---
+
+## Provenance
+
+Symbol Layer and the Role Primitives were first published in July 2025 at **https://symbollayer.com**.
+
+The project has been developed and discussed in public across several channels:
+
+- **Website**  
+  Primary canonical source: https://symbollayer.com  
+
+- **Substack**  
+  Essays and announcements, including early specs and commentary.  
+  Substack: https://symbollayer.substack.com  
+
+- **X (Twitter)**  
+  Public threads and references to Role Primitives and Symbol Layer.  
+  X profile: https://x.com/symbollayer
+
+- **Internet Archive (Wayback Machine)**  
+  Key pages have been archived regularly since 2025.  
+  Example index: `https://web.archive.org/web/*/https://symbollayer.com/*`
+
+- **GitHub commit history**  
+  This repository contains the complete, time ordered history of the site and its specifications.
+
+Authored by **shk** (S. Kaufman) 
+All content is dedicated to the public domain.
+
+---
+
+## License
+
+This project is released under **CC0 1.0 Universal**.  
+See the `license` file in this repository for details.
+
+You may use, adapt, fork or integrate this work without restriction. Attribution is not required but is appreciated for clarity and discovery.
+
+
 

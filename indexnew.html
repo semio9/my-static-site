@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg">
+
+
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Role Primitives — Keystone · Symbol Layer</title>
+  <meta name="description" content="Role Primitives: a framing essay that translates classic social roles (Librarian, Butler, Companion, etc.) into elemental AI role specifications." />
+  <link rel="canonical" href="https://symbollayer.com/">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Symbol Layer">
+  <meta name="datePublished" content="2025-10-08">
+  <meta property="og:title" content="Role Primitives — Symbol Layer">
+  <meta property="og:description" content="Elemental AI role specifications that translate classic social roles into machine-actionable behaviors and governance boundaries.">
+  <meta property="og:url" content="https://symbollayer.com/">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://symbollayer.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+
+
+
+.mono-article {
+  max-width: var(--reader-width);
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.mono-header {
+  margin-bottom: 1.5rem;
+}
+
+.mono-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  margin-bottom: 0.25rem;
+}
+
+.mono-article h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0.2rem 0 0.4rem;
+}
+
+.mono-article h3.mono-subhead {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 2.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.mono-rule {
+  border: none;
+  border-top: 1px solid var(--gray-300);
+  margin: 0.75rem 0 1.5rem;
+}
+
+.mono-article p {
+  margin: 0.75rem 0;
+  font-size: 0.98rem;
+}
+
+.mono-emph {
+  font-style: italic;
+  margin: 0.9rem 0;
+}
+
+.mono-spacer-lg {
+  height: 2.5rem;
+}
+
+.mono-list {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 1.2rem;
+}
+
+.mono-list li {
+  margin: 0.2rem 0;
+}
+
+.note-speculative {
+  font-size: 0.85rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 4px;
+  background: var(--gray-50);
+  margin-bottom: 1.5rem;
+  color: var(--gray-700);
+}
+
+
+
+.section-rule {
+  border: none;
+  border-top: 1px solid var(--gray-300);
+  margin: 20px 0;
+}
+
+.subhead {
+  margin-top: 30px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.callout {
+  font-style: italic;
+  border-left: 3px solid var(--gray-400);
+  padding-left: 15px;
+  margin: 20px 0;
+}
+
+.pull {
+  background: var(--gray-50);
+  padding: 15px 20px;
+  border-radius: 6px;
+  border-left: 4px solid var(--accent);
+  margin: 24px 0;
+}
+
+.spacer {
+  height: 32px;
+}
+
+.role-list li {
+  margin-bottom: 6px;
+}
+
+
+.pull{
+  margin:1rem 0;
+  padding:.75rem .9rem;
+  background:#f6f9ff;
+  border-radius:6px;
+  font-size:.95em;
+}
+
+.page .pagefoot {
+  grid-column: 1 / -1;
+  justify-self: center;
+  text-align: left;
+  max-width: var(--max-w);
+  width: 100%;
+  border-top: 1px solid #eef4ff;
+  padding-top: 18px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Buttons */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:9px;
+  font-weight:600;
+  text-decoration:none;
+  line-height:1;
+  border:1px solid transparent;
+  transition:transform 0.02s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  cursor:pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn:active{ transform:translateY(1px); }
+
+.btn-primary{
+  background:var(--accent);
+  color:#fff;
+  box-shadow:0 6px 18px rgba(11,108,255,0.18);
+}
+.btn-primary:hover{ filter:brightness(0.97); box-shadow:0 8px 22px rgba(11,108,255,0.22); }
+
+.btn-ghost{
+  background:#fff;
+  color:var(--accent);
+  border-color:#dbe9ff;
+}
+.btn-ghost:hover{
+  background:var(--accent);
+  color:#ffffff;
+  border-color:var(--accent);
+}
+
+.btn:focus-visible{
+  outline:2px solid transparent;
+  box-shadow:0 0 0 3px rgba(11,108,255,0.35);
+  border-color:transparent;
+}
+
+
+     .hero-ctas .btn { min-width: 200px; }
+    .hero{
+      background:linear-gradient(180deg,#f8fbff 0%,#ffffff 100%);
+      border-bottom:1px solid #eef4ff;
+      text-align:center;
+      padding:64px 24px 48px;
+    }
+    .hero .tagline{color:#555;font-size:18px;margin:10px 0 22px}
+    .hero-ctas{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .hero .inner { max-width: 900px; margin: 0 auto; }
+
+    :root{
+      --max-w:1100px;
+      --accent:#0B7F8E;
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --card:#f6f9ff;
+      --reader-width:68ch;
+      --radius:12px;
+      --gap:20px;
+    }
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:#0b1220;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* Global link styling to avoid default bright blue */
+    a{
+      color:var(--accent);
+      text-decoration:underline;
+    }
+    a:visited{
+      color:var(--accent);
+    }
+    a:hover{
+      color:#065f68;
+    }
+
+    .page{max-width:var(--max-w);margin:36px auto;padding:24px;display:grid;grid-template-columns:1fr 320px;gap:var(--gap)}
+    @media (max-width:980px){ .page{grid-template-columns:1fr; padding:18px} .toc {order:2} .main {order:1} }
+
+    header.site{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+    .brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:16px}
+    .meta-small{color:var(--muted);font-size:13px}
+
+    article p{max-width:var(--reader-width);margin:0 0 14px}
+    article h2{font-size:20px;margin:28px 0 10px;color:#071133}
+    article h3{font-size:16px;margin:16px 0 8px;color:#0c1a33}
+
+    .toc{position:sticky;top:28px;align-self:start;padding:14px;border-radius:10px;background:#fff;border:1px solid #f2f6ff}
+    .toc h4{margin:0 0 8px;font-size:14px}
+    .toc ul{list-style:none;padding:0;margin:0}
+    .toc a{display:block;padding:6px 6px;border-radius:8px;text-decoration:none;color:#0b1220;font-size:14px}
+    .toc a:hover{background:#f7fbff}
+
+    .note-speculative{
+      margin:0 0 12px;
+      padding:.6rem .75rem;
+      border-radius:8px;
+      border:1px solid #e5e7eb;
+      background:#f9fafb;
+      color:var(--muted);
+      font-size:0.9em;
+      font-style:italic;
+    }
+
+    #theory-heading{
+      font-size:18px;
+      color:#4b5563;
+      margin-top:24px;
+    }
+
+    .spec-group-label{
+      margin:6px 0 2px;
+      font-size:12px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:0.04em;
+      color:var(--muted);
+      padding:4px 6px;
+    }
+
+
+    /* --- Override global TOC soap-bar behavior on this page --- */
+
+/* Reset any existing ::before/::after bars coming from global CSS */
+.toc a::before,
+.toc a::after {
+  content: none !important;
+}
+
+/* Monograph-style TOC links with a single left soap bar */
+.toc a {
+  position: relative;
+  padding-left: 14px; /* room for the bar */
+}
+
+/* The bar itself */
+.toc a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 4px;
+  height: 14px;
+  border-radius: 999px;
+  background: transparent;
+  transform: translateY(-50%);
+  transition: background 0.15s ease;
+}
+
+/* Fill only on hover or when “current” */
+.toc a:hover::before,
+.toc a[aria-current="true"]::before {
+  background: var(--accent);
+}
+
+  </style>
+</head>
+
+<body>
+
+  <section class="hero" role="banner">
+    <div class="inner">
+      <h1>Role Primitives</h1>
+      <p class="tagline">Classic social roles, re-engineered for the Agentic Age.</p>
+
+      <div class="hero-ctas">
+        
+        <a class="btn btn-ghost" href="#essays">Essays</a>
+
+        <a class="btn btn-ghost" href="#specs">Specs</a>
+        <a class="btn btn-ghost" href="#theory">Theory (speculative)</a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="page" role="document">
+    <div class="main">
+      <header class="site">
+        <a class="brand" href="/">SymbolLayer</a>
+        <div class="meta-small">Draft v0.3 — 2025-12-07 · CC0 1.0</div>
+      </header>
+
+
+
+
+
+
+
+
+
+  
+
+<article id="keystone" aria-labelledby="keystone-heading" class="mono-article">
+
+
+
+
+
+    <header class="mono-header">
+  <p class="mono-kicker">Role Primitives · Keystone Essay</p>
+  <h2 id="section-1">1. The Role Primitive Framework</h2>
+  <hr class="mono-rule">
+</header>
+
+
+ 
+  <p>
+    The Role Primitive project is an AI-UX design philosophy that aims at improving AI-human interactions by 
+    utilizing existing (Western, in this instantiation) classic social roles as a basis for intuitive, functionally 
+    and emotionally optimized AI-human intersubjective relations.
+  </p>
+
+  <h3 class="mono-subhead">A. The Role Primitive</h3>
+
+  <p>The Role Primitive itself is a conceptual unit defined as a specification document and any necessary future AI model implementation methodologies.</p>
+
+  <p class="mono-emph">
+    It translates a cultural archetype into a machine implementable format.
+  </p>
+
+  <p>Role refers to a defined historical and culturally resonant and to some degree (potentially) archetypally derived social form.</p>
+  <p>Primitive refers to its basic, elemental and potentially archetypal nature.</p>
+
+  <p class="mono-emph">
+    A Role Primitive is a root structure that AIs may instantiate and is both extensible and composable.
+  </p>
+
+  <p>
+    They are in some ways semantic handles for classic social roles meant to serve as standardized structural units implementable almost 
+    like file types (JPEG, PDF, HTML) are. Complex, rich social constructs as implementable instantiated AI forms.
+  </p>
+
+  <div class="mono-spacer-lg"></div>
+
+<h2 id="section-2">2. Advantages of the Role Primitive Approach</h2>
+<hr class="mono-rule">
+
+  <h3 class="mono-subhead">Familiarity</h3>
+
+  <p>
+    The knowledge of how to relate to an entity (human or AI) performing a classic social role is highly intuitive for 
+    the vast majority of humans within a particular culture and possibly in their archetypal forms, between them.
+  </p>
+
+  <p class="mono-emph">
+    People know at a nearly visceral cultural level what a Librarian or a Companion is and how they might behave.
+  </p>
+
+  <p>This decreases friction, is fundamentally intuitive and provides firm semantic grounding for interactions.</p>
+  <p>A butler anticipates tasks, a secretary records and a guard monitors boundaries, behavioral sets of classic social roles innately understood by humans within a culture.</p>
+
+  <h3 class="mono-subhead">Functional Coherence for Complex Interactions</h3>
+
+  <p>
+    Agents instantiating Role Primitives operate within a role-based social mesh, facilitating coherent, orderly and 
+    well-structured interactions.
+  </p>
+
+  <p>Role-based functional boundaries between AIs interacting with both humans and each other facilitate interactions that:</p>
+
+  <ul class="mono-list">
+    <li>Are orderly and well maintained</li>
+    <li>Are effectively coordinated</li>
+    <li>Minimize behavioral entropy</li>
+    <li>Maximize regularity and broad predictability</li>
+  </ul>
+
+  <p class="mono-emph">
+    Each agent thus stays on its own forest trail so that the path map remains legible and navigable and interactions 
+    don't get caught up in off trail brambles or the confusingly intertwined paths of overlapping behavioral mandates.
+  </p>
+
+  <p>In this way they ultimately actualize effective governance at the UX layer.</p>
+
+  <h3 class="mono-subhead">Cultural Legibility</h3>
+
+  <p>
+    Classic social roles, such as Advisors, Mentors, Guards or Companions are foundational, load-bearing artifacts of 
+    human cultural inheritance.
+  </p>
+  <p>
+    Encoding AIs with these kinds of deeply intuitive and resonant roles affords them inherent legitimacy and evokes 
+    in users a wellspring of preexisting behavioral and emotional response patterns,
+  </p>
+
+  <p class="mono-emph">
+    This preset, deep vocabulary of interaction is fundamentally and nearly instinctively legible and interpretable 
+    for users, making their utilization in AI UX perhaps inevitable.
+  </p>
+
+  <div class="mono-spacer-lg"></div>
+
+<h2 id="section-3">3. The Necessity of the Role Primitive Framework</h2>
+<hr class="mono-rule">
+
+  <p>
+    Without Role Primitives agents risk collapse into generic, amorphous, overburdened and ineffective entities. Their 
+    flatness and chaotic patterns discourage user trust and they cannot be easily scaled into complex social forms.
+  </p>
+
+  <p>Role Primitives define boundaries that discourage scope creep, misuse and inchoate expectations.</p>
+  <p>Role Primitives afford legibility that provides predictability and trust, and promotes long-term adoption and increased utilization.</p>
+  <p>Role Primitives define behavioral grooves that robustify coordination and minimize behavior overlaps and conflicts.</p>
+
+  <h3 class="mono-subhead">Role Grooves (Context)</h3>
+
+  <p>
+    Role Grooves are a central conceptual element of the Role Primitive framework. They represent erosion-channel-like 
+    behavioral patterns that have been carved deep into the bedrock of human culture.
+  </p>
+
+  <p class="mono-emph">
+    They are natural pathways that are intuitive to humans, replete in the training data and even form nodes of connection 
+    density in model manifolds themselves.
+  </p>
+
+  <p>
+    They are the persisting patterns of classic social roles, of how we see and are seen, behave and are behaved towards in culture. Role Grooves 
+    carve stable behavioral tracks promoting predictability, innate interpretability, interoperability and trust.
+  </p>
+
+  <div class="mono-spacer-lg"></div>
+
+<h2 id="section-4">4. Role Grooves</h2>
+<hr class="mono-rule">
+
+  <p>
+    A role groove is a behavioral channel that a Role Primitive's archetypal inspiration runs in, a stable behavioral and 
+    symbolic path that is consistently recognizable and reliable.
+  </p>
+
+  <ul class="mono-list">
+    <li><strong>Librarian Role Groove:</strong> retrieval, citation, epistemic trail following</li>
+    <li><strong>Companion Role Groove:</strong> presentness, availability, witnessing, low level wit, humor, and interestingness</li>
+    <li><strong>Guard Role Groove:</strong> vigilance, boundary enforcement, warning, threat assessment, nonjudgmentalness</li>
+    <li><strong>Butler (valet) Role Groove:</strong> discreet daily task and errand level orchestration, tactfulness, reserve</li>
+  </ul>
+
+  <p class="mono-emph">
+    Grooves are not meant to constrain creativity but instead to prevent drift. They are like the paths and guideways of 
+    Central Park, guiding advancement without overly limiting lateral movement, offering gentle direction and uplift 
+    within a manicured and intentional space; the jungle civilized.
+  </p>
+
+  <div class="mono-spacer-lg"></div>
+
+  <h2 id="specs">5. Implications</h2>
+<hr class="mono-rule">
+
+  <p>
+    The base set of ten canonical Role Primitives seeks to establish the concept on the basis of some of the most 
+    significant commonly encountered roles in (Western) culture. It is to be noted they are at this stage demonstrative 
+    and in no way intended to be taken as definitive, but merely as a starter set that illustrates and begins to define 
+    the concept.
+  </p>
+
+  <p>
+    It is hoped that future iterations will expand upon, more precisely define and extend the framework. Here it attempts 
+    to link:
+  </p>
+
+  <ul class="mono-list">
+    <li>Social vocabulary to standard function</li>
+    <li>Defined boundaries to trust, legibility and utility</li>
+    <li>Interaction dynamics to complexity optimization and scalability</li>
+  </ul>
+
+  <p>
+    Role Primitives are intended to supply the basic social grammar of AI-human interaction in the AI and Agentic Age.
+  </p>
+
+</article>
+
+<section id="theory" aria-labelledby="theory-heading" class="mono-article" style="margin-top:72px;max-width:var(--reader-width);">
+
+  <div class="note-speculative">
+    <strong>Speculative work:</strong>
+    The pieces below explore possible implications of Role Primitives for alignment and model geometry.
+    They are provisional and not central to the Role Primitive Framework.
+  </div>
+
+  <header class="mono-header">
+    <h2 id="theory-heading">Theory (speculative)</h2>
+    <hr class="mono-rule">
+  </header>
+
+  <p>
+    Speculative work: The following pieces are offered in the spirit of exploration. They touch on highly complex issues and do 
+    not represent central elements in the Role Primitive Framework which is intended to define a UX grammar of AI-human interaction.
+  </p>
+
+  <p>
+    These pieces relate to ways in which the Role Primitive Framework might intersect with issues such as alignment, model 
+    geometry, role identity and coherence and roles as attractors in latent space. It is acknowledged that these issues are profoundly 
+    intricate, difficult and significant and it is hoped that these pieces will be taken in the tentative and prospective spirit in 
+    which they are here offered.
+  </p>
+
+  <ul class="mono-list">
+    <li><a href="/role-primitives/a-stab-at-alignment.html">A Stab at Alignment: The Role Primitive</a></li>
+    <li><a href="/essays/relief-of-roles.html">The Relief of Roles</a></li>
+    <li><a href="/role-primitives/roles-as-modular-attractors.html">Roles as Modular Attractors: A Geometric Argument</a></li>
+  </ul>
+
+</section> 
+    </div>
+
+    <aside class="toc" aria-label="In-page navigation">
+  <h4>On this page</h4>
+  <ul>
+    <li><a href="#section-1">1. The Role Primitive Framework</a></li>
+    <li><a href="#section-2">2. Advantages of the Role Primitive Approach</a></li>
+    <li><a href="#section-3">3. The Necessity of the Role Primitive Framework</a></li>
+    <li><a href="#section-4">4. Role Grooves</a></li>
+    <li><a href="#specs">5. Implications</a></li>
+    <li><a href="#theory">Theory (speculative)</a></li>
+  </ul>
+
+      <h4 id="essays" style="margin-top:14px;">Essays</h4>
+      <ul>
+        <li><a href="/role-primitives/">Role Primitives (full essay)</a></li>
+        <li><a href="/essays/relief-of-roles.html">The Relief of Roles</a></li>
+        <li><a href="/role-primitives/relief-through-roles.html">Relief Through Roles</a></li>
+      </ul>
+
+      <h4 id="specs-nav" style="margin-top:14px;">Specs</h4>
+      <ul>
+        <li class="spec-group-label">Cognitive roles</li>
+        <li><a href="/role-primitives/librarian">Librarian</a></li>
+        <li><a href="/role-primitives/secretary">Secretary</a></li>
+        <li><a href="/role-primitives/archivist">Archivist</a></li>
+
+        <li class="spec-group-label">Relational roles</li>
+        <li><a href="/role-primitives/companion">Companion</a></li>
+        <li><a href="/role-primitives/confidant">Confidant</a></li>
+        <li><a href="/role-primitives/therapist">Therapist</a></li>
+
+        <li class="spec-group-label">Operational roles</li>
+        <li><a href="/role-primitives/butler">Butler</a></li>
+        <li><a href="/role-primitives/guard">Guard</a></li>
+        <li><a href="/role-primitives/advisor">Advisor</a></li>
+        <li><a href="/role-primitives/mentor">Mentor</a></li>
+
+        <li class="spec-group-label">Meta / governance</li>
+        <li><a href="/role-primitives/protocol">Protocol</a></li>
+      </ul>
+
+      <h4 id="theory-nav" style="margin-top:14px;">Theory (speculative)</h4>
+      <ul>
+        <li><a href="/role-primitives/a-stab-at-alignment.html">A Stab at Alignment</a></li>
+        <li><a href="/essays/relief-of-roles.html">The Relief of Roles</a></li>
+        <li><a href="/role-primitives/roles-as-modular-attractors.html">Roles as Modular Attractors: A Geometric Argument</a></li>
+      </ul>
+
+      <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+        <div style="font-weight:600;margin-bottom:6px">Quick links</div>
+        <a href="/role-primitives/" style="display:block;margin-bottom:6px;text-decoration:none;color:var(--accent)">Full essay (long)</a>
+        <a href="/role-primitives/librarian" style="display:block;text-decoration:none;color:#0b1220">Librarian spec →</a>
+        <a href="/role-primitives/companion" style="display:block;text-decoration:none;color:#0b1220">Companion spec →</a>
+        <a href="/role-primitives/butler" style="display:block;text-decoration:none;color:#0b1220">Butler spec →</a>
+      </div>
+
+    </aside>
+
+    <footer class="pagefoot" role="contentinfo">
+      <p style="font-size:0.9em;color:gray;margin-top:0.6em">
+        <strong>Provenance:</strong><br>
+        Site live: 2025-07-29&nbsp;&nbsp;Keystone published: 2025-10-08<br>
+        Canonical source: <a href="https://github.com/semio9/my-static-site">GitHub repository</a><br>
+        <span id="last-updated-line">Last updated: <time id="last-updated" datetime=""></time></span>
+      </p>
+      <div>Draft v0.3 — Symbol Layer · Public Domain (CC0 1.0)</div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var lm = new Date(document.lastModified);
+      if (!isNaN(lm.getTime())) {
+        var y = lm.getFullYear();
+        var m = String(lm.getMonth() + 1).padStart(2, '0');
+        var d = String(lm.getDate()).padStart(2, '0');
+        var iso = y + '-' + m + '-' + d;
+        var t = document.getElementById('last-updated');
+        if (t) {
+          t.textContent = iso;
+          t.setAttribute('datetime', iso);
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
