@@ -185,7 +185,7 @@ spec header
 <header>
   <h1>RoleName — AI Social Role Primitive Specification</h1>
   <p class="meta">Draft v0.x — YYYY-MM-DD · CC0 1.0 (Public Domain) · Author: <a href="/about">shk</a></p>
-  <p class="meta">Canonical: <code>https://symbollayer.com/role-primitives/rolename.html</code></p>
+  <p class="meta">Canonical: <code>https://symbollayer.com/role-primitives/rolename</code></p>
   <div class="rule"></div>
 </header>
 
