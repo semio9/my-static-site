@@ -27,9 +27,10 @@ This repository is the source of the public site at **https://symbollayer.com**.
 - `role-primitives/`  
   Core specs and essays for the Role Primitive framework:
   - `a-stab-at-alignment.html`  
-  - `relief-through-roles.html`  
+  - `relief-through-roles.html` 
+  - `relief-of-roles.html` 
   - `protocol.html`  
-  - `protocol-manifesto.html`  
+  - `roles-as-modular-attractors:-a-geometric-argument`  
   - `librarian.html`, `butler.html`, `companion.html`, `confidant.html`, `secretary.html`, `archivist.html`, `advisor.html`, `mentor.html`, `guard.html`, `therapist.html`  
   - `header footer` and `index.html` (internal navigation and structure helpers)
 
@@ -67,6 +68,15 @@ Symbol Layer and the Role Primitives were first published in July 2025 at **http
 
 The project has been developed and discussed in public across several channels:
 
+### Repository provenance
+
+- Project launched: 2025-07-02  
+- First commit: 2025-07-02  
+- Latest commit: 2025-12-14  
+
+This GitHub repository is the canonical, time-ordered record of Symbol Layer.
+
+
 - **Website**  
   Primary canonical source: https://symbollayer.com  
 
@@ -97,5 +107,5 @@ See the `license` file in this repository for details.
 
 You may use, adapt, fork or integrate this work without restriction. Attribution is not required but is appreciated for clarity and discovery.
 
-
+ 
 
