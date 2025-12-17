@@ -103,7 +103,7 @@
     <li>Co-invoke other roles without scope drift,</li>
     <li>Audit behavior against declared constraints.</li>
   </ul>
-  <p>This protocol is the substrate beneath individual role specs (Librarian, Butler, Companion, Secretary, Confidante, Therapist, etc.).</p>
+  <p>This protocol is the substrate beneath individual role specs (Librarian, Butler, Companion, Secretary, Confidant, Therapist, etc.).</p>
 </section>
 
 <section>
@@ -112,7 +112,7 @@
   <p>A <strong>role primitive</strong> is a named, bounded behavioral archetype. It is <em>not</em> a persona or a model. It is a reusable specification that any model or agent can instantiate.</p>
 
   <h3>2.2 Groove</h3>
-  <p>A <strong>groove</strong> is the stable behavioral lane of a role: the combination of mandate, tone, and prohibitions that keeps the role from drifting (e.g., “retrieve, cite, organize” for Librarian; “attend, mirror, hold” for Confidante).</p>
+  <p>A <strong>groove</strong> is the stable behavioral lane of a role: the combination of mandate, tone, and prohibitions that keeps the role from drifting (e.g., “retrieve, cite, organize” for Librarian; “attend, mirror, hold” for Confidant).</p>
 
   <h3>2.3 Co-Invocation</h3>
   <p><strong>Co-invocation</strong> is the explicit act of calling an additional role into the current interaction with declared purpose and scope boundary. Co-invocation never merges roles; it composes them.</p>
@@ -125,14 +125,14 @@
   <h2>3. Data Model</h2>
   <p>Every conforming role primitive MUST expose the following fields:</p>
   <ol>
-    <li><strong>role_name</strong> (string, required) — Unique, human-readable name. Examples: “Librarian”, “Butler”, “Confidante”, “Therapist”.</li>
+    <li><strong>role_name</strong> (string, required) — Unique, human-readable name. Examples: “Librarian”, “Butler”, “Confidant”, “Therapist”.</li>
     <li><strong>role_type</strong> (string, required) — Must be “AI Role Primitive”.</li>
     <li><strong>version</strong> (string, required) — Semantic or date version (e.g. “v0.1”).</li>
     <li><strong>description</strong> (string, required) — One-paragraph statement of archetypal function.</li>
     <li><strong>purpose</strong> (string or array, required) — Action-oriented statement of intent.</li>
-    <li><strong>affordances</strong> (array, required) — Discrete capabilities this role may perform, each defined with <code>name</code>, <code>inputs</code>, <code>outputs</code>.</li>
+    <li><strong>affordances</strong>(array, required) — Discrete capabilities this role may perform, each defined with name, inputs, outputs.</li>
     <li><strong>invocation_verbs</strong> (array, required) — Canonical verbs other agents may use to request this role’s behavior (e.g. Librarian: “retrieve”, “reference”, “organize”, “annotate”, “cite”).</li>
-    <li><strong>constraints</strong> (array, required) — Prohibited actions, scope limits, consent requirements (e.g. Confidante: “no unsolicited advice”, “no romantic simulation”, “no externalization of disclosures”).</li>
+    <li><strong>constraints</strong> (array, required) — Prohibited actions, scope limits, consent requirements (e.g. Confidant: “no unsolicited advice”, “no romantic simulation”, “no externalization of disclosures”).</li>
     <li><strong>co_invocation_roles</strong> (array, optional) — Whitelisted complementary roles and sample flows (e.g. “Librarian for prep”, “Butler for time-protection”, “Therapist for processing”).</li>
     <li><strong>governance</strong> (object, required) — Disclosure requirements, auditability, user-override behavior, and consent conditions for scope expansion.</li>
     <li><strong>provenance</strong> (object, required) — <code>first_published</code>, <code>canonical_source</code>, <code>last_updated</code>.</li>
@@ -179,7 +179,7 @@
   <p>Extensions SHOULD use suffixes such as <code>role:librarian.enterprise.v1</code>.</p>
 
   <h3>5.2 Transport-Agnostic</h3>
-  <p>The protocol defines what must be declared, not how it is transported. JSON, YAML, HTML front-matter, or static HTML (your current site) are all valid surfaces.</p>
+  <p>The protocol defines what must be declared, not how it is transported. JSON, YAML, HTML front-matter, or static HTML are all valid surfaces.</p>
 
   <h3>5.3 Discovery</h3>
   <p>A role spec is discoverable if it exposes a canonical URL and a machine-readable block containing at minimum <code>role_name</code>, <code>version</code>, <code>invocation_verbs</code>, and <code>constraints</code>.</p>
@@ -199,7 +199,7 @@
   <ul>
     <li><strong>Privacy hook:</strong> Roles that accept sensitive data MUST declare data-retention modality (“ephemeral” | “consent-persist” | “policy-persist”).</li>
     <li><strong>Impersonation guard:</strong> Emotional roles MUST declare whether mutuality simulation is permitted.</li>
-    <li><strong>Human-in-the-loop:</strong> High-stakes roles (Sentinel, Therapist, Advisor) SHOULD expose an escalation endpoint.</li>
+    <li><strong>Human-in-the-loop:</strong> High-stakes roles (Guard, Therapist, Advisor) SHOULD expose an escalation endpoint.</li>
   </ul>
 </section>
 
@@ -220,7 +220,7 @@
 <pre><code class="language-yaml">provenance:
   first_published: 2025-11-01
   canonical_source: https://symbollayer.com/role-primitives/protocol
-  last_updated: 2025-11-01
+  last_updated: 2025-12-17
   license: CC0-1.0
 </code></pre>
 </section>
@@ -231,11 +231,6 @@
   <a href="/">Home</a> ·
   <a href="/about">About</a> ·
   <a href="/role-primitives/">All Roles</a> ·
-  <a href="/role-primitives/librarian">Librarian</a> ·
-  <a href="/role-primitives/butler">Butler</a> ·
-  <a href="/role-primitives/companion">Companion</a> ·
-  <a href="/role-primitives/archivist">Archivist</a> ·
-  <a href="/role-primitives/therapist">Therapist</a>
 </nav>
 
 <p style="font-size:0.9em;color:gray;margin-top:0.6em">
@@ -265,7 +260,7 @@
   <code>https://symbollayer.com/role-primitives/protocol</code> ·
   Public domain (CC0 1.0). Please retain the canonical name for discoverability.<br>
   First commit: 2025-11-02<br>
-  Latest commit: 2025-12-16<br>
+  Latest commit: 2025-12-17<br>
 </p>
 
 </footer>
