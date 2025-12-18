@@ -1,3 +1,6 @@
+
+This repository supersedes the archived symbollayer/symbollayer repository and is the maintained canonical source.
+
 # Symbol Layer
 
 **Role Primitives and the Architecture of AI Social Roles**  
