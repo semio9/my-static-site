@@ -1,7 +1,10 @@
+
 # Symbol Layer
 
 **Role Primitives and the Architecture of AI Social Roles**  
 **CC0 1.0 · First published July 2025**
+
+“This repository supersedes the archived symbollayer/symbollayer repository and is the currently maintained canonical source.”
 
 ---
 
