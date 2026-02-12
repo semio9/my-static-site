@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg">
+
+  <meta charset="utf-8">
+  <title>Role Primitives — Context · Symbol Layer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://symbollayer.com/context">
+  <meta name="author" content="shk">
+  <meta name="description" content="Contextual framing for the Symbol Layer Role Primitive framework within AI research and design.">
+  <meta name="canonical-name" content="context">
+  <meta name="license" content="CC0 1.0 (Public Domain)">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <style>
+    :root {
+      --ink:#1b1f23;
+      --muted:#6a737d;
+      --rule:#e1e4e8;
+      --bg:#ffffff;
+      --accent:#0B7F8E;
+      --soft:#f6f8fa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 2.5rem auto;
+      max-width: 860px;
+      padding: 0 1.2rem 3rem;
+      font: 16px/1.65 Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    h1, h2 {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+    }
+    h1 { font-size: 2rem; margin: 1.8rem 0 0.6rem; line-height: 1.25; }
+    p { margin: 0.9rem 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; color: #138b8f; }
+    .rule { border-top: 1px solid var(--rule); margin: 1rem 0; }
+    footer {
+      border-top: 1px solid var(--rule);
+      margin-top: 2rem;
+      padding-top: 1rem;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    nav a { color: var(--accent); text-decoration: none; margin: 0 .25rem; }
+    nav a:hover { text-decoration: underline; color: #138b8f; }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <a class="brand" href="/">Symbol Layer</a>
+
+  <nav class="topnav">
+    <a href="/">Home</a> ·
+    <a href="/about">About</a>
+  </nav>
+
+  <div class="rule"></div>
+</header>
+
+<main>
+
+  <h1>Role Primitives — Context</h1>
+
+  <p>
+    This page situates the Symbol Layer Role Primitive framework within a broader
+    landscape of AI research and design, clarifying its scope, level of abstraction,
+    and relationship to adjacent work.
+  </p>
+
+  <p>
+    The Symbol Layer Role Primitive framework is a conceptual abstraction for
+    stabilizing AI behavior across long-horizon interactions by treating social
+    roles as first-class semantic objects rather than implicit side effects of
+    prompts, personas, or training.
+  </p>
+
+  <p>
+    A role primitive is not a personality, character, or affective style, but a
+    named social–semantic role that constrains expectations, authority, tone, and
+    scope of action in a way legible to both humans and machines.
+  </p>
+
+  <p>
+    The core claim is that many observed failure modes in large language models —
+    including persona drift, behavioral incoherence, and role confusion over time —
+    arise because models are implicitly required to inhabit a single,
+    undifferentiated role such as “assistant.” When all interactions are routed
+    through this collapsed role, inconsistency emerges not primarily as error, but
+    as instability in social meaning and expectation.
+  </p>
+
+  <p>
+    The Role Primitive framework proposes addressing this problem at the semantic
+    and interface layer by making roles explicit, bounded, and composable, rather
+    than relying solely on activation-level constraints, suppression techniques, or
+    internal alignment heuristics. In this framing, roles function as mediating
+    structures for interaction, governance, and interpretation, shaping how
+    capabilities are expressed and understood rather than prescribing specific
+    internal mechanisms.
+  </p>
+
+  <p>
+    From a systems perspective, the absence of explicit roles can be understood as
+    the lack of stable regions of behavior for distinct social functions, allowing
+    behavior to drift across unconstrained latent directions rather than remaining
+    coherent over time. Making roles explicit provides a stabilizing reference frame
+    for both users and systems, improving legibility, continuity, and mutual
+    understanding across extended interactions.
+  </p>
+
+  <p>
+    This framework is related to ongoing research on persona drift, long-horizon
+    coherence, role-based interaction, and assistant behavior, but operates at a
+    different level of abstraction. Rather than modeling roles as emergent
+    properties or task labels, Role Primitives treat them as semantic
+    infrastructure: named, interpretable structures that sit between raw
+    capability and social use.
+  </p>
+
+  <p>
+    This framework has been developed and publicly articulated on Symbol Layer
+    beginning in mid-2025, with early role specifications followed by subsequent
+    essays and later formal framing, and continues to be refined.
+  </p>
+
+</main>
+
+<footer class="site-footer">
+
+  <nav>
+    <a href="/">Home</a> ·
+    <a href="/about">About</a>
+  </nav>
+
+  <p class="meta-small" style="margin-top:6px;">
+    Authored by <a href="/about">shk</a>. Published at
+    <a href="https://symbollayer.com">Symbol Layer</a>. Canonical:
+    <code>https://symbollayer.com/context</code>.
+    Public domain (CC0 1.0).
+  </p>
+
+</footer>
+
+</body>
+</html>
