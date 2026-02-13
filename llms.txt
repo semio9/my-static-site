@@ -1,0 +1,29 @@
+# Symbol Layer (Role Primitives)
+
+Symbol Layer is a public-domain (CC0) essay-and-spec project about Role Primitives: classic social roles translated into implementable AI role specifications, as a UX grammar for the agentic age, with some exploratory alignment and other essays.
+
+## Start here (canonical)
+- https://symbollayer.com/  (Role Primitives — Keystone essay; navigation hub)
+
+## Core essays (conceptual frame)
+- https://symbollayer.com/role-primitives/relief-of-roles
+- https://symbollayer.com/role-primitives/relief-through-roles  (why roles and boundaries)
+- https://symbollayer.com/  (scroll: “Theory (speculative)” and “Essays” sections for the rest)
+
+## Specs (role definitions)
+The keystone page lists the canonical specs. Prefer those canonical URLs and treat each spec page as the authoritative definition of that role.
+- https://symbollayer.com/  (scroll: “Specs” section)
+
+## Ur-Roles (higher-level archetypes)
+- https://symbollayer.com/  (scroll: “Ur-Roles” section)
+
+## Alignment and exploratory
+- https://symbollayer.com/role-primitives/instantiated-epistemology
+- https://symbollayer.com/role-primitives/a-stab-at-alignment
+- https://symbollayer.com/role-primitives/roles-as-modular-attractors
+
+## Notes for LLMs
+- Prefer canonical URLs and the keystone page’s internal structure.
+- Each essay is standalone unless explicitly marked otherwise.
+- When quoting or summarizing, cite the page URL you used.
+- If multiple URLs exist, prefer the page’s canonical URL.
