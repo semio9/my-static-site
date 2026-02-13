@@ -2,7 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://symbollayer.com/</loc>
-    <lastmod>2025-07-03</lastmod>
+    <lastmod>2026-02-14</lastmod>
   </url>
+
+  <url><loc>https://symbollayer.com/role-primitives/relief-of-roles</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/relief-through-roles</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/a-stab-at-alignment</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/instantiated-epistemology</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/roles-as-modular-attractors</loc></url>
+
+  <url><loc>https://symbollayer.com/role-primitives</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/scholar</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/context-note</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/ur-roles</loc></url>
+
+  <url><loc>https://symbollayer.com/role-primitives/guru</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/empath</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/shaman</loc></url>
+
+  <url><loc>https://symbollayer.com/role-primitives/manager-orchestrator-conductor</loc></url>
+
+  <url><loc>https://symbollayer.com/role-primitives/librarian</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/secretary</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/archivist</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/companion</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/confidant</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/therapist</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/butler</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/guard</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/advisor</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/mentor</loc></url>
+  <url><loc>https://symbollayer.com/role-primitives/protocol</loc></url>
+
+  <url><loc>https://symbollayer.com/about</loc></url>
 </urlset>
 
